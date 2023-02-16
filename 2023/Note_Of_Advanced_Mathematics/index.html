@@ -1,0 +1,1137 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Ryker Zhu">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="对于考研数学（数学一）而言，高等数学约占60%，考研数学整张卷子一共10个选择题、6个填空题、6个解答题。 极限 极限（Limit）研究函数在 某一个小区间 上的各种性质。  趋向常数时的函数极限：\(\forall\varepsilon&gt;0,\,\exists\delta&gt;0,\,0&lt;\left|x-x_0\right|&lt;\delta,\,\left|f\left(x\r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高等数学笔记">
+<meta property="og:url" content="https://devexzh.github.io/2023/Note_Of_Advanced_Mathematics/">
+<meta property="og:site_name" content="杂货小铺">
+<meta property="og:description" content="对于考研数学（数学一）而言，高等数学约占60%，考研数学整张卷子一共10个选择题、6个填空题、6个解答题。 极限 极限（Limit）研究函数在 某一个小区间 上的各种性质。  趋向常数时的函数极限：\(\forall\varepsilon&gt;0,\,\exists\delta&gt;0,\,0&lt;\left|x-x_0\right|&lt;\delta,\,\left|f\left(x\r">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://devexzh.github.io/img/calculus-on-blackboard.jpg">
+<meta property="article:published_time" content="2023-01-31T08:39:06.025Z">
+<meta property="article:modified_time" content="2023-02-16T03:27:02.798Z">
+<meta property="article:author" content="Ryker Zhu">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://devexzh.github.io/img/calculus-on-blackboard.jpg">
+  
+  
+  
+  <title>高等数学笔记 - 杂货小铺</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/hljs.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"devexzh.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="杂货小铺" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>杂货小铺</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/calculus-on-blackboard.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="高等数学笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-01-31 16:39" pubdate>
+          2023年1月31日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          13k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          23 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">高等数学笔记</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>对于考研数学（数学一）而言，高等数学约占60%，考研数学整张卷子一共10个选择题、6个填空题、6个解答题。</p>
+<h1 id="极限">极限</h1>
+<p>极限（Limit）研究函数在 <strong>某一个小区间</strong>
+上的各种性质。</p>
+<blockquote>
+<p>趋向常数时的函数极限：<span class="math inline">\(\forall\varepsilon&gt;0,\,\exists\delta&gt;0,\,0&lt;\left|x-x_0\right|&lt;\delta,\,\left|f\left(x\right)-A\right|&lt;\varepsilon\Rightarrow\displaystyle\lim_{x\to{x_0}}{f\left(x\right)}=A\)</span></p>
+</blockquote>
+<blockquote>
+<p>趋向无穷时的函数极限：<span class="math inline">\(\forall\varepsilon&gt;0,\,\exists{X}&gt;0,\,\left|x\right|&gt;X,\,\left|f\left(x\right)-A\right|&lt;\varepsilon\Rightarrow\displaystyle\lim_{x\to{\infty}}{f\left(x\right)}=A\)</span></p>
+</blockquote>
+<p><span class="github-emoji"><span>⚠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> <strong>注意</strong></p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\lim_{x\to{x_0}}{f\left(x\right)}\)</span>是否存在与<span class="math inline">\(f\left(x_0\right)\)</span>无关</p></li>
+<li><p>充要条件：左右极限相等时，函数极限存在；反之亦然</p>
+<p><span class="math inline">\(\displaystyle\lim_{x\to{x_0^+}}{f\left(x\right)}=\lim_{x\to{x_0^-}}{f\left(x\right)}=A\Leftrightarrow\lim_{x\to{x_0}}{f\left(x\right)}=A\)</span></p>
+<p><span class="math inline">\(\displaystyle\lim_{x\to{+\infty}}{f\left(x\right)}=\lim_{x\to{-\infty}}{f\left(x\right)}=A\Leftrightarrow\lim_{x\to{\infty}}{f\left(x\right)}=A\)</span></p></li>
+<li><p>极限定义的变体</p>
+<ul>
+<li>更改极限定义中的小于号为小于等于号 <strong>不影响</strong>
+最终极限的表达，即以下两种是可以相互替换的：
+<ul>
+<li><span class="math inline">\(0&lt;\left|x-x_0\right|&lt;\delta\Leftrightarrow0&lt;\left|x-x_0\right|\leq\delta\)</span></li>
+<li><span class="math inline">\(\left|f\left(x\right)-A\right|&lt;\varepsilon\Leftrightarrow\left|f\left(x\right)-A\right|\leq\varepsilon\)</span></li>
+</ul></li>
+<li>极限定义中的<span class="math inline">\(\varepsilon\)</span>可以换成任意表达式，只要
+<ol type="1">
+<li>表达式 <strong>结果为正</strong>（例如： <span class="math inline">\(\forall{\gamma&gt;0},\,\left|f\left(x\right)-A\right|&lt;\frac1{\gamma}\)</span>）</li>
+<li>表达式可以 <strong>取到任意小的正数</strong></li>
+</ol></li>
+</ul></li>
+</ul>
+<h2 id="极限的性质">极限的性质</h2>
+<ol type="1">
+<li><p>唯一性 （常常用来证明）</p>
+<p>函数极限存在，则只能存在唯一的值，否则就是不存在。</p></li>
+<li><p>局部有界性</p>
+<p>在某个小区域内，函数有界。</p>
+<blockquote>
+<p><span class="math inline">\(\displaystyle\lim_{x\to{x_0}}{f\left(x\right)}=A\Rightarrow\exists{\delta,M&gt;0},\,0&lt;\left|x-x_0\right|&lt;\delta,\,\left|f\left(x\right)\right|\leq{M}\)</span></p>
+</blockquote></li>
+<li><p>局部保号性（可以用来证明 <span class="math inline">\(Fermat\)</span> 引理，经常与极值、拐点结合）</p>
+<p>在某个小区域内，函数值的符号与极限值的符号一致。</p>
+<blockquote>
+<p><span class="math inline">\(\displaystyle\lim_{x\to{x_0}}{f\left(x\right)}=A\Rightarrow\exists{\delta&gt;0},\,0&lt;\left|x-x_0\right|&lt;\delta,\)</span>
+<span class="math inline">\(\left \{
+\begin{array}{l}A&gt;0\Rightarrow{f\left(x\right)&gt;0}\\f\left(x\right)\geq0\Rightarrow{A\geq0}\end{array}\right.\)</span></p>
+</blockquote></li>
+</ol>
+<h2 id="极限的求法">极限的求法</h2>
+<h3 id="夹逼准则">夹逼准则</h3>
+<blockquote>
+<p>设函数 <span class="math inline">\(f\left(x\right),\,g\left(x\right),\,h\left(x\right)\)</span>
+满足：</p>
+<ol type="1">
+<li><span class="math inline">\(\exists{\mathring{U}\left(x_0,\delta\right)}\)</span>，有
+<span class="math inline">\(g\left(x\right)\leq f\left(x\right)\leq
+h\left(x\right)\)</span></li>
+<li><span class="math inline">\(\displaystyle\lim_{x\to
+x_0}g\left(x\right)=\lim_{x\to x_0}h\left(x\right)=A\)</span></li>
+</ol>
+<p>则 <span class="math inline">\(\displaystyle\lim_{x\to
+x_0}f\left(x\right)=A\)</span></p>
+</blockquote>
+<p>特点：不好求极限但是好放缩（如 <span class="math inline">\(x^2+y^2\geq2xy\)</span>）<br>
+当式子放大之后为0，则要想到给式子加绝对值</p>
+<h3 id="单调有界收敛准则">单调有界收敛准则</h3>
+<p>单调有界数列必有极限（单调增数列有上界必收敛）</p>
+<p>证明数列单调的常用方法：</p>
+<ul>
+<li><p><span class="math inline">\(x_{n+1}-x_n\geq 0\;\left(\leq
+0\right)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\frac{x_{n+1}}{x_n}\geq
+1\;\left(\leq 1\right)\)</span></p></li>
+<li><p>数学归纳法</p></li>
+<li><p><span class="math inline">\(x_{n+1}=f\left(x_n\right)\)</span></p>
+<pre><code class=" mermaid">flowchart TB
+  函数可导 ---|导函数| 恒大于零 &amp; 恒小于零
+  恒小于零 --- 数列不具有单调性 
+  恒大于零 ---|前两个元素| 单调增 &amp; 单调减
+</code></pre></li>
+</ul>
+<h2 id="无穷小">无穷小</h2>
+<h3 id="无穷小的运算性质">无穷小的运算性质</h3>
+<ol type="1">
+<li>有限个无穷小的乘积仍为无穷小</li>
+<li>有限个无穷小的和仍为无穷小</li>
+<li>有界函数与无穷小的乘积仍为无穷小</li>
+</ol>
+<h3 id="等价无穷小">等价无穷小</h3>
+<p><span class="math inline">\(\begin{array}{l}\sin{x} \sim x
+&amp;\tan{x} \sim x \\[0.5em] \arcsin{x} \sim x &amp;\arctan{x} \sim x
+\\[0.5em] \ln{\left(x+\sqrt{1+x^2}\right)} \sim x
+&amp;\ln{\left(1+x\right)} \sim x &amp;e^x-1 \sim x \\[0.5em] \\
+\left(1+x\right)^\alpha \sim \alpha x+1 &amp;\log_a{(1+x)} \sim
+\frac{x}{\ln{a}} \\[0.5em] \\ x-\ln{\left(1+x\right)} \sim
+\frac{1}{2}x^2 &amp;1-\cos{x} \sim \frac{1}{2}x^2 \\[0.5em] \\
+\tan{x}-\sin{x} \sim \frac{1}{2}x^3 \\[0.5em] \tan{x}-x \sim
+\frac{1}{3}x^3 &amp; x-\arctan{x} \sim \frac{1}{3}x^3 \\[0.5em]
+x-\sin{x} \sim \frac{1}{6}x^3 &amp;\arcsin{x}-x \sim
+\frac{1}{6}x^3\end{array}\)</span></p>
+<h2 id="极限的运算">极限的运算</h2>
+<h3 id="无穷小的运算性质-1">无穷小的运算性质</h3>
+<ol type="1">
+<li>有限个无穷小之和/积仍为无穷小</li>
+<li>有界函数与无穷小的积仍为无穷小</li>
+</ol>
+<h3 id="多项式比值的极限求法">多项式比值的极限求法</h3>
+<blockquote>
+<p><span class="math inline">\(\displaystyle\lim_{x\to\infty}{\frac{a_0x^m+a_1x^{m-1}+\cdots+a_{m-1}x+a_m}{b_0x^n+b_1x^{n-1}+\cdots+b_{n-1}x+b_n}}\left(a_0,b_0\neq0\right)=\lim_{x\to\infty}{\frac{a_0x^m}{b_0x^n}}\)</span><span class="math inline">\(=\left\{\begin{array}{ll}\frac{a_0}{b_0}&amp;m=n\\\infty&amp;m&gt;n\\0&amp;m&lt;n\end{array}\right.\)</span></p>
+</blockquote>
+<h3 id="未定式极限的求法">未定式极限的求法</h3>
+<ul>
+<li><p><span class="math inline">\(\frac{\infty}{\infty}\)</span>、<span class="math inline">\(\frac{0}{0}\)</span> 型 利用 <span class="math inline">\(L'H\hat{o}pital\)</span> 法则</p></li>
+<li><p><span class="math inline">\(0\cdot\infty\)</span> 型</p></li>
+<li><p><span class="math inline">\(\infty-\infty\)</span> 型</p></li>
+<li><p><span class="math inline">\({f\left(x\right)}^{g\left(x\right)}\)</span>
+型（<span class="math inline">\(1^\infty\)</span>、<span class="math inline">\(0^0\)</span>、<span class="math inline">\(\infty^0\)</span>）</p>
+<p>利用对数恒等式 <span class="math inline">\({f\left(x\right)}^{g\left(x\right)}=e^{g\left(x\right)\ln{f\left(x\right)}
+}\)</span> 转换表达式</p></li>
+</ul>
+<h2 id="连续">连续</h2>
+<p>函数的连续性 (Continuity):</p>
+<blockquote>
+<p><span class="math inline">\(f\left(x\right)\)</span> 在 <span class="math inline">\(x_0\)</span> 处连续 <span class="math inline">\(\Leftrightarrow\displaystyle\lim_{\Delta x\to
+0}\Delta y=0\)</span> <span class="math inline">\(\displaystyle\Leftrightarrow\lim_{\Delta x\to
+0}f\left(x_0+\Delta x\right)-f\left(x_0\right)=0\)</span> <span class="math inline">\(\displaystyle\Leftrightarrow\lim_{x\to{x_0}}f\left(x\right)=f\left(x_0\right)\)</span></p>
+</blockquote>
+<h3 id="间断点">间断点</h3>
+<ul>
+<li>第 <span class="math inline">\(\mathrm{I}\)</span> 类间断点：<span class="math inline">\(\displaystyle\lim_{x\to
+x_0^+}f\left(x\right)\)</span> 与 <span class="math inline">\(\displaystyle\lim_{x\to
+x_0^-}f\left(x\right)\)</span> 均存在
+<ul>
+<li><span class="math inline">\(\displaystyle\lim_{x\to
+x_0^+}f\left(x\right)=\lim_{x\to x_0^-}f\left(x\right)\neq
+f\left(x_0\right)\)</span>（或 <span class="math inline">\(f\left(x_0\right)\)</span> 不存在），则 <span class="math inline">\(x=x_0\)</span> 为<strong>可去间断点</strong></li>
+<li><span class="math inline">\(\displaystyle\lim_{x\to
+x_0^+}f\left(x\right)\neq\lim_{x\to x_0^-}f\left(x\right)\)</span>，则
+<span class="math inline">\(x=x_0\)</span>
+为<strong>跳跃间断点</strong></li>
+</ul></li>
+<li>第 <span class="math inline">\(\mathrm{II}\)</span> 类间断点：<span class="math inline">\(\displaystyle\lim_{x\to
+x_0^+}f\left(x\right)\)</span> 与 <span class="math inline">\(\displaystyle\lim_{x\to
+x_0^-}f\left(x\right)\)</span> 至少有其中之一不存在</li>
+</ul>
+<h3 id="闭区间上连续函数的性质">闭区间上连续函数的性质</h3>
+<h4 id="有界性与最值定理">有界性与最值定理</h4>
+<p>设函数 <span class="math inline">\(f\left(x\right)\)</span> 在闭区间
+<span class="math inline">\(\left[a,\,b\right]\)</span> 上连续，则 <span class="math inline">\(f\left(x\right)\)</span>
+在该区间上有界，且必可取到最大值与最 小值。</p>
+<h4 id="零点存在性定理">零点存在性定理</h4>
+<p>设函数 <span class="math inline">\(f\left(x\right)\)</span> 在闭区间
+<span class="math inline">\(\left[a,\,b\right]\)</span> 上连续，且 <span class="math inline">\(f\left(a\right)\cdot f\left(b\right)\lt
+0\)</span>，则 <span class="math inline">\(\exists\xi\in\left[a,\,b\right]\)</span> 使得
+<span class="math inline">\(f\left(\xi\right)=0\)</span></p>
+<h4 id="介值定理">介值定理</h4>
+<p>设函数 <span class="math inline">\(f\left(x\right)\)</span> 在闭区间
+<span class="math inline">\(\left[a,\,b\right]\)</span> 上连续，<span class="math inline">\(f\left(x\right)_{\mathrm{min}}\leq\mu\leq
+f\left(x\right)_{\mathrm{max}}\)</span>，则 <span class="math inline">\(\exists\xi\in\left[a,\,b\right]\)</span> 使得
+<span class="math inline">\(f\left(\xi\right)=\mu\)</span></p>
+<h2 id="两个重要极限">两个重要极限</h2>
+<p><span class="math display">\[\lim_{x\to 0}\frac{\sin
+x}{x}=1\qquad\lim_{x\to\infty}\left(1+\frac{1}{x}\right)^{x}=e\]</span></p>
+<h1 id="导数">导数</h1>
+<p><span class="math display">\[\displaystyle
+f^\prime\left(x_0\right)=\lim_{x\rightarrow
+x_0}{\frac{f\left(x\right)-f\left(x_0\right)}{x-x_0}}=\lim_{\Delta
+x\rightarrow0}{\frac{f\left(x_0+\Delta
+x\right)-f\left(x_0\right)}{\Delta x}}\]</span></p>
+<p>Derivative</p>
+<h2 id="高阶导数">高阶导数</h2>
+<p><span class="math inline">\(Leibniz\)</span> 公式 <span class="math display">\[\left(uv\right)^{\left(n\right)}=\sum_{k=0}^{n}{C_n^ku^{\left(n-k\right)}v^{\left(k\right)}}\]</span></p>
+<h2 id="参数方程求导">参数方程求导</h2>
+<p><span class="math display">\[\frac{dy}{dx}=\frac{\frac{dy}{dt}}{\frac{dx}{dt}}\qquad\frac{d^2y}{dx^2}=\frac{d\left(\frac{dy}{dx}\right)}{dx}=\frac{\frac{d\left(\frac{dy}{dx}\right)}{dt}}{\frac{dx}{dt}}\]</span></p>
+<h2 id="fermat-引理"><span class="math inline">\(Fermat\)</span>
+引理</h2>
+<p>可导函数的每一个可导的极值点都是驻点</p>
+<blockquote>
+<p>设函数 <span class="math inline">\(f\left(x\right)\)</span> 在点
+<span class="math inline">\(x_0\)</span> 的某邻域 <span class="math inline">\(U\left(x_0\right)\)</span> 内有定义，并且在 <span class="math inline">\(x_0\)</span> 处可导，如果对<span class="math inline">\(\forall{x\in{U\left(x_0\right)}
+}\)</span>，有<span class="math inline">\(f\left(x\right)\leq
+f\left(x_0\right)\)</span>（或<span class="math inline">\(f\left(x\right)\geq
+f\left(x_0\right)\)</span>），那么<span class="math inline">\(f^\prime\left(x_0\right)=0\)</span></p>
+</blockquote>
+<h2 id="导数的应用">导数的应用</h2>
+<h1 id="微分">微分</h1>
+<p>Differential</p>
+<h2 id="微分中值定理">微分中值定理</h2>
+<h3 id="rolle-中值定理"><span class="math inline">\(Rolle\)</span>
+中值定理</h3>
+<ul>
+<li><p>条件</p>
+<ul>
+<li>函数 <span class="math inline">\(f\left(x\right)\)</span> 在 <span class="math inline">\(\left[a,\ b\right]\)</span> 上连续</li>
+<li>函数 <span class="math inline">\(f\left(x\right)\)</span> 在 <span class="math inline">\(\left(a,\ b\right)\)</span> 上可导</li>
+<li><span class="math inline">\(f\left(a\right)=f\left(b\right)\)</span></li>
+</ul></li>
+<li><p>结论</p>
+<p><span class="math inline">\(\exists\xi\in\left(a,\,b\right)\)</span>，使得
+<span class="math inline">\(f^\prime\left(\xi\right)=0\)</span></p></li>
+</ul>
+<h4 id="bulb-题型一多次使用-rolle-中值定理以证明高阶导数为零"><span class="github-emoji"><span>💡</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>
+题型一：多次使用 <span class="math inline">\(Rolle\)</span>
+中值定理以证明高阶导数为零</h4>
+<p><strong>原理</strong>：证明 <span class="math inline">\(n\)</span>
+阶导为零需要 <span class="math inline">\(n+1\)</span>
+个函数值相等的点，使用 <span class="math inline">\(n\)</span> 次 <span class="math inline">\(Rolle\)</span> 中值定理。</p>
+<h4 id="bulb-题型二找到辅助函数-fleftxright-以证明"><span class="github-emoji"><span>💡</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>
+题型二：找到辅助函数 <span class="math inline">\(F\left(x\right)\)</span> 以证明</h4>
+<p><strong>原理</strong>：还原题目所要证明的函数是找到辅助函数的关键。</p>
+<p>常用的还原公式</p>
+<table>
+
+<thead>
+<tr class="header">
+<th style="text-align: center;">形式</th>
+<th style="text-align: center;">还原后</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(u^\prime\left(x\right)\pm
+v^\prime\left(x\right)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(u\left(x\right)\pm v\left(x\right)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(u^\prime\left(x\right) v\left(x\right)\pm
+u\left(x\right)v^\prime\left(x\right)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(u\left(x\right)v\left(x\right)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\frac{u^\prime\left(x\right)
+v\left(x\right)-
+u\left(x\right)v^\prime\left(x\right)}{v^2\left(x\right)}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\frac{u\left(x\right)}{v\left(x\right)}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\frac{u^\prime\left(x\right)}{u\left(x\right)}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\ln
+u\left(x\right)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>通常题干中要求证明的式子会约去一个因子，利用还原公式和适当地添加公因子就能得到最终的辅助函数。</p>
+<h3 id="lagrange-中值定理"><span class="math inline">\(Lagrange\)</span>
+中值定理</h3>
+<ul>
+<li><p>条件</p>
+<ul>
+<li>函数 <span class="math inline">\(f\left(x\right)\)</span> 在 <span class="math inline">\(\left[a,\ b\right]\)</span> 上连续</li>
+<li>函数 <span class="math inline">\(f\left(x\right)\)</span> 在 <span class="math inline">\(\left(a,\ b\right)\)</span> 上可导</li>
+</ul></li>
+<li><p>结论</p>
+<p><span class="math inline">\(\exists\xi\in\left(a,\,b\right)\)</span>，使得
+<span class="math inline">\(\displaystyle
+f^\prime\left(\xi\right)=\frac{f\left(b\right)-f\left(a\right)}{b-a}\)</span>
+（或 <span class="math inline">\(f\left(b\right)-f\left(a\right)=\left(b-a\right)f^\prime\left(a+\theta\left(b-a\right)\right)\;\left(0\lt\theta\lt
+1\right)\)</span>）</p></li>
+<li><p>推论</p>
+<p><span class="math display">\[f\left(x\right)\equiv C\Rightarrow
+f^\prime\left(x\right)\equiv 0\]</span></p></li>
+<li><p>证明</p>
+<p>利用 <span class="math inline">\(Rolle\)</span>
+中值定理证明。首先应当找到辅助函数，易得 <span class="math inline">\(F\left(x\right)=\left(f\left(b\right)-f\left(a\right)\right)x-\left(b-a\right)f\left(x\right)\)</span>，并有：
+<span class="math display">\[\left\{\begin{array}{l}F\left(a\right)=af\left(b\right)-bf\left(a\right)\\F\left(b\right)=af\left(b\right)-bf\left(a\right)\end{array}\right.\Rightarrow
+F\left(a\right)=F\left(b\right)\]</span> 又 <span class="math inline">\(\because F\left(x\right)\in
+C\left[a,\,b\right]\)</span> 且 <span class="math inline">\(F\left(x\right)\)</span> 在 <span class="math inline">\(\left(a,\,b\right)\)</span> 上可导，<span class="math inline">\(\therefore\exists\xi\in\left(a,\ b\right)\)</span>
+使得 <span class="math inline">\(F^\prime\left(\xi\right)=0\)</span> 即
+<span class="math inline">\(f\left(b\right)-f\left(a\right)-\left(b-a\right)f^\prime\left(\xi\right)=0\)</span>，移项后得
+<span class="math inline">\(\displaystyle
+f^\prime\left(\xi\right)=\frac{f\left(b\right)-f\left(a\right)}{b-a}\)</span>，得证。</p></li>
+<li><p>作用</p>
+<ul>
+<li>升高导数的阶数</li>
+<li>化简求极限的过程
+<ul>
+<li>例：<span class="math inline">\(\displaystyle\lim_{x\to\infty}n^2\left(\arctan\frac\pi
+n-\arctan\frac\pi{n+1}\right)\)</span> = <span class="math inline">\(\displaystyle\lim_{x\to\infty}\frac{\pi
+n^2}{n\left(n+1\right)}\cdot\frac{1}{1+\xi^2}=\pi\lim_{\xi\to
+0}\frac{1}{1+\xi^2}=\pi\)</span></li>
+</ul></li>
+<li>证明不等式
+<ul>
+<li>例：证明 <span class="math inline">\(\displaystyle\forall n\in
+\mathrm{N^+},\,\frac{1}
+{n+1}\lt\ln{\left(1+\frac{1}{n}\right)}\lt\frac{1}{n}\)</span><br>
+<span class="math inline">\(\displaystyle\ln{1+\frac{1}{n}}=\ln{\frac{n+1}{n}}=\ln{\left(n+1\right)}-\ln{n}\)</span>。令
+<span class="math inline">\(f\left(x\right)=\ln{x}\)</span>，在 <span class="math inline">\(\left[n,\,n+1\right]\)</span> 上连续，在 <span class="math inline">\(\left(n,\,n+1\right)\)</span> 上可导。故 <span class="math inline">\(\displaystyle\ln{\left(1+\frac{1}{n}\right)}=\left(n+1-n\right)\cdot\frac{1}{\xi}=\frac{1}{\xi},\;\xi\in\left(n,\,n+1\right)\)</span>，从而
+<span class="math inline">\(\displaystyle\frac{1}
+{n+1}\lt\frac{1}{\xi}\lt\frac{1}{n}\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="cauchy-中值定理"><span class="math inline">\(Cauchy\)</span>
+中值定理</h3>
+<ul>
+<li><p>条件</p>
+<ul>
+<li>函数 <span class="math inline">\(f\left(x\right),\,g\left(x\right)\)</span> 在
+<span class="math inline">\(\left[a,\ b\right]\)</span> 上连续</li>
+<li>函数 <span class="math inline">\(f\left(x\right),\,g\left(x\right)\)</span> 在
+<span class="math inline">\(\left[a,\ b\right]\)</span> 在 <span class="math inline">\(\left(a,\ b\right)\)</span> 上可导</li>
+<li><span class="math inline">\(g^\prime\left(x\right)\neq
+0\)</span></li>
+</ul></li>
+<li><p>结论</p>
+<p><span class="math inline">\(\exists\xi\in\left(a,\,b\right)\)</span>，使得
+<span class="math inline">\(\displaystyle\frac{f^\prime\left(\xi\right)}{g^\prime\left(\xi\right)}=\frac{f\left(b\right)-f\left(a\right)}{g\left(b\right)-g\left(a\right)}\)</span></p></li>
+<li><p>作用</p>
+<ul>
+<li>证明多中值问题
+<ol type="1">
+<li>分离中值</li>
+<li>分别使用 <span class="math inline">\(Lagrange\)</span> 和 <span class="math inline">\(Cauchy\)</span> 中值定理</li>
+</ol>
+例：函数 <span class="math inline">\(f\left(x\right)\)</span> 在 <span class="math inline">\(\left[a,\,b\right]\)</span> 上连续、在 <span class="math inline">\(\left(a,\,b\right)\)</span> 上可导，且 <span class="math inline">\(f\left(x\right)\neq 0\)</span>，证明 <span class="math inline">\(\exists\xi,\,\eta\in\left(a,\,b\right)\)</span>
+使得 <span class="math inline">\(\displaystyle\frac{f^\prime\left(\xi\right)}{f^\prime\left(\eta\right)}=\frac{e^b-e^a}{b-a}e^{\eta}\)</span><br>
+解：[分离中值] <span class="math inline">\(\displaystyle\begin{array}{c}\underbrace{f^\prime\left(\xi\right)}\\{Lagrange}\end{array}=\frac{e^b-e^a}{b-a}\cdot\begin{array}{c}\underbrace{\frac{f^\prime\left(\eta\right)}{e^\eta}}\\{Cauchy}\end{array}\)</span><br>
+[使用中值定理] 令 <span class="math inline">\(g\left(x\right)=e^x\)</span>，使用 <span class="math inline">\(Cauchy\)</span> 中值定理：<span class="math inline">\(\displaystyle\frac{f\left(b\right)-f\left(a\right)}{g\left(b\right)-g\left(a\right)}=\frac{f^\prime\left(\eta\right)}{e^\eta}\)</span>；使用
+<span class="math inline">\(Lagrange\)</span> 中值定理：<span class="math inline">\(\displaystyle
+f^\prime\left(\xi\right)=\frac{f\left(b\right)-f\left(a\right)}{b-a}\)</span>。等式右边
+<span class="math inline">\(=\displaystyle\frac{e^b-e^a}{b-a}\cdot\frac{f\left(b\right)-f\left(a\right)}{e^b-e^a}=\)</span>
+等式左边，得证。</li>
+</ul></li>
+</ul>
+<h2 id="taylor-公式"><span class="math inline">\(Taylor\)</span>
+公式</h2>
+<blockquote>
+<p>设函数 <span class="math inline">\(f\left(x\right)\)</span> 在 <span class="math inline">\(\mathring{U}\left(x_0\right)\)</span> 内具有 <span class="math inline">\(n+1\)</span> 阶导数，则：</p>
+<p><span class="math display">\[\begin{array}{c}\displaystyle
+f\left(x\right)=\sum_{i=0}^{n}\frac{f^{\left(i\right)}\left(x_0\right)}{i!}\left(x-x_0\right)^i+R_n\left(x\right)\\=f\left(x_0\right)+f^\prime\left(x_0\right)\left(x-x_0\right)+\frac{f^{\prime\prime}\left(x_0\right)}{2!}\left(x-x_0\right)^2+\cdots+\frac{f^{\left(n\right)}\left(x_0\right)}{n!}\left(x-x_0\right)^n+R_n\left(x\right)\end{array}\]</span></p>
+<p>其中 <span class="math inline">\(R_n\left(x\right)\)</span>
+称为余项。<span class="math inline">\(R_n\left(x\right)=\left\{\begin{array}{ll}\frac{f^{\left(n+1\right)}\left(\xi\right)}{\left(n+1\right)!}\left(x-x_0\right)^{n+1}&amp;Lagrange
+\ 余项\\[0.8em] o\left(\left(x-x_0\right)^n\right)&amp;Peano\
+余项\end{array}\right.\)</span></p>
+</blockquote>
+<p>若 <span class="math inline">\(x_0=0\)</span>，则称该公式为 <span class="math inline">\(Maclaurin\)</span> 公式。</p>
+<p>常用的 <span class="math inline">\(Maclaurin\)</span> 展开式： -
+<span class="math inline">\(e^x=1+x+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+o\left(x^n\right)\)</span></p>
+<h1 id="积分">积分</h1>
+<h2 id="定积分">定积分</h2>
+<p>设函数 <span class="math inline">\(f\left(x\right)\)</span> 在 <span class="math inline">\(\left[a,b\right]\)</span> 上有界。</p>
+<ol type="1">
+<li><p>取 <span class="math inline">\(a=x_0&lt;x_1&lt;\cdots&lt;x_n=b\)</span></p>
+<ul>
+<li><span class="math inline">\(\left[a,b\right]=\left[x_0,x_1\right]\cup\left[x_1,x_2\right]\cup\cdots\cup\left[x_{n-1},x_n\right]\)</span></li>
+<li><span class="math inline">\(\Delta x_i=x_i-x_{i-1}\
+\left(i\in\left[1,n\right]\right)\)</span></li>
+</ul></li>
+<li><p>任取 <span class="math inline">\(\xi_i\in\left[x_{i-1},x_i\right]\)</span>，求和
+<span class="math inline">\(\sum_{i=1}^{n}{f\left(\xi_i\right)\Delta
+x_i}\)</span></p></li>
+<li><p>取 <span class="math inline">\(\displaystyle\lambda=\max_{1\le
+i\le n}{\left\{\Delta x_i\right\}}\)</span></p></li>
+<li><p>若 <span class="math inline">\(\displaystyle\lim_{\lambda\rightarrow0}{\sum_{i=1}^{n}{f\left(\xi_i\right)\Delta
+x_i}}\)</span> 存在，则其为 <span class="math inline">\(f\left(x\right)\)</span> 在 <span class="math inline">\(\left[a,b\right]\)</span>
+上的定积分（Integral），即： <span class="math display">\[\int_{a}^{b}f\left(x\right)dx=\lim_{\lambda\rightarrow0}{\sum_{i=1}^{n}{f\left(\xi_i\right)\Delta
+x_i}}\]</span></p></li>
+</ol>
+<p>定积分的诸性质：</p>
+<ul>
+<li>若 <span class="math inline">\(f\left(x\right)\geq0\)</span>（<span class="math inline">\(a\le x\le b\)</span>），则 <span class="math inline">\(\displaystyle\int_{a}^{b}f\left(x\right)dx\geq0\)</span></li>
+<li>若 <span class="math inline">\(f\left(x\right)\geq
+g\left(x\right)\)</span>（<span class="math inline">\(a\le x\le
+b\)</span>），则 <span class="math inline">\(\displaystyle\int_{a}^{b}f\left(x\right)dx\geq\int_{a}^{b}g\left(x\right)dx\)</span></li>
+<li>若 <span class="math inline">\(f\left(x\right)\)</span>、<span class="math inline">\(\left|f\left(x\right)\right|\)</span> 在 <span class="math inline">\(\left[a,\ \ b\right]\)</span> 上可积，则 <span class="math inline">\(\displaystyle\left|\int_{a}^{b}f\left(x\right)dx\right|\le\int_{a}^{b}\left|f\left(x\right)\right|dx\)</span></li>
+</ul>
+<h3 id="积分中值定理">积分中值定理</h3>
+<blockquote>
+<p>设 <span class="math inline">\(f\left(x\right)\in{C\left[a,\,b\right]}\)</span>，则
+<span class="math inline">\(\exists\xi\in\left[a,\,b\right]\)</span>，使得
+<span class="math inline">\(\displaystyle\int_{a}^{b}f\left(x\right)dx=f\left(\xi\right)\left(b-a\right)\)</span></p>
+</blockquote>
+<ul>
+<li><p><em>证明</em></p>
+<p><span class="math inline">\(\because
+f\left(x\right)\in{C\left[a,\,b\right]},\,\therefore\exists{M=f(x)_{\max},\,m=f(x)_{\min}}\)</span>，使得
+<span class="math inline">\(m\leq f(x)\leq M\)</span>。<br>
+对等式两边取在 <span class="math inline">\(\left[a,\,b\right]\)</span>
+上的定积分：<span class="math inline">\(\displaystyle\int_{a}^{b}m\leq\int_{a}^{b}f\left(x\right)dx\leq\int_{a}^{b}M\Rightarrow\)</span><br>
+<span class="math inline">\(\displaystyle
+m\leq\frac{1}{b-a}\int_{a}^{b}f\left(x\right)dx\leq M\)</span>。<br>
+（介值定理）<span class="math inline">\(\therefore\exists\xi\in\left[a,\,b\right]\)</span>，使得
+<span class="math inline">\(\displaystyle\frac{1}{b-a}\int_{a}^{b}f\left(x\right)dx=f\left(\xi\right)\)</span></p></li>
+<li><p>用途：在被积函数 <strong>连续</strong>
+的情况下，去掉积分号</p></li>
+</ul>
+<h3 id="积分上限函数">积分上限函数</h3>
+<p>设 <span class="math inline">\(f\left(x\right)\in
+C\left[a,b\right]\)</span>，<span class="math inline">\(\Phi\left(x\right)=\int_{a}^{x}f\left(t\right)dt\)</span>，则
+<span class="math inline">\(\frac{d}{dx}\Phi\left(x\right)=f\left(x\right)\)</span>，即
+<span class="math inline">\(\Phi^\prime\left(x\right)=f\left(x\right)\)</span>。</p>
+<p>积分上限函数的诸性质</p>
+<ul>
+<li><span class="math inline">\(\displaystyle\frac{d}{dx}\int_{a}^{x}{f(t)dt}=f\left(x\right)\)</span></li>
+<li><span class="math inline">\(\displaystyle\frac{d}{dx}\int_{a}^{\varphi\left(x\right)}f\left(t\right)dt=f\left(\varphi\left(x\right)\right)\cdot\varphi^\prime\left(x\right)\)</span></li>
+<li><span class="math inline">\(\displaystyle\frac{d}{dx}\int_{\varphi_1\left(x\right)}^{\varphi_2\left(x\right)}{f(t)dt}=f\left(\varphi_2\left(x\right)\right)\varphi_2^\prime\left(x\right)-f\left(\varphi_1\left(x\right)\right)\varphi_1^\prime\left(x\right)\)</span></li>
+</ul>
+<h3 id="函数的定积分性质">函数的定积分性质</h3>
+<h4 id="周期函数">周期函数</h4>
+<h4 id="三角函数">三角函数</h4>
+<p><span class="math display">\[\int_0^{\frac\pi2}f\left(\sin x,\,\cos
+x\right)=\int_0^{\frac\pi2}f\left(\cos x,\,\sin x\right)\]</span></p>
+<h5 id="wallis-公式"><span class="math inline">\(Wallis\)</span>
+公式</h5>
+<p><span class="math display">\[\int_0^{\frac\pi2}\sin^nx=\int_0^{\frac\pi2}\cos^nx=\left\{\begin{array}{ll}\frac{n-1}{n}\cdot\frac{n-3}{n-2}\cdots\frac23\cdot1&amp;n\,为奇数\\\frac{n-1}{n}\cdot\frac{n-3}{n-2}\cdots\frac12\cdot\frac\pi2&amp;n\,为偶数\end{array}\right.\]</span></p>
+<h3 id="定积分的应用">定积分的应用</h3>
+<p>利用微元法求解面积、体积的步骤：</p>
+<ol type="1">
+<li>确定积分变量及其取值区间</li>
+<li>任取区间 <span class="math inline">\(\left[x,\,x+dx\right]\)</span>，求出该区间对应的微元表达式</li>
+<li>求积分</li>
+</ol>
+<h2 id="多元函数积分学">多元函数积分学</h2>
+<h3 id="二重积分">二重积分</h3>
+<h3 id="三重积分">三重积分</h3>
+<h3 id="曲线积分">曲线积分</h3>
+<h3 id="曲面积分">曲面积分</h3>
+<h1 id="常微分方程">常微分方程</h1>
+<p>Ordinary Differential Equations</p>
+<h1 id="无穷级数">无穷级数</h1>
+<p>Infinite Series</p>
+<h2 id="数项级数">数项级数</h2>
+<h2 id="幂级数">幂级数</h2>
+<h2 id="fourier-级数">Fourier 级数</h2>
+<h1 id="向量代数与空间解析几何">向量代数与空间解析几何</h1>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">学习笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%B0%E5%AD%A6/">#数学</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>高等数学笔记</div>
+      <div>https://devexzh.github.io/2023/Note_Of_Advanced_Mathematics/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Ryker Zhu</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年1月31日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/IELTS_Learning/" title="IELTS Notes">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">IELTS Notes</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/Note_Of_Linear_Algebra/" title="线性代数笔记">
+                        <span class="hidden-mobile">线性代数笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"neutral"});
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('mermaid' in window) {
+        mermaid.init();
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://github.com/DevExzh" target="_blank" rel="nofollow noopener"><span>Copyright © 2023 Ryker Zhu</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/live2d.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
