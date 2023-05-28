@@ -1,0 +1,1086 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Ryker Zhu">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="概率论的基本概念 flowchart LR;   cf(条件概率公式)--&gt;|变形|mf(乘法公式)--&gt;|相加|tf(全概率公式)   bf(Bayes 公式)   tf--&gt;bf   cf--&gt;bf   mf--&gt;bf   click cf href &quot;https:&#x2F;&#x2F;devexzh.github.io&#x2F;2023&#x2F;Note_Of_Probability_And_S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="概率论笔记">
+<meta property="og:url" content="https://devexzh.github.io/2023/Note_Of_Probability_And_Statistics/">
+<meta property="og:site_name" content="杂货小铺">
+<meta property="og:description" content="概率论的基本概念 flowchart LR;   cf(条件概率公式)--&gt;|变形|mf(乘法公式)--&gt;|相加|tf(全概率公式)   bf(Bayes 公式)   tf--&gt;bf   cf--&gt;bf   mf--&gt;bf   click cf href &quot;https:&#x2F;&#x2F;devexzh.github.io&#x2F;2023&#x2F;Note_Of_Probability_And_S">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://devexzh.github.io/img/probability_background.webp">
+<meta property="article:published_time" content="2023-04-16T08:47:26.846Z">
+<meta property="article:modified_time" content="2023-05-27T07:34:13.559Z">
+<meta property="article:author" content="Ryker Zhu">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://devexzh.github.io/img/probability_background.webp">
+  
+  
+  
+  <title>概率论笔记 - 杂货小铺</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/hljs.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"devexzh.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="杂货小铺" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>杂货小铺</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/probability_background.webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="概率论笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-04-16 16:47" pubdate>
+          2023年4月16日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">概率论笔记</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="概率论的基本概念">概率论的基本概念</h1>
+<pre><code class=" mermaid">flowchart LR;
+  cf(条件概率公式)--&gt;|变形|mf(乘法公式)--&gt;|相加|tf(全概率公式)
+  bf(Bayes 公式)
+  tf--&gt;bf
+  cf--&gt;bf
+  mf--&gt;bf
+  click cf href "https://devexzh.github.io/2023/Note_Of_Probability_And_Statistics/#条件概率公式"
+  click mf href "https://devexzh.github.io/2023/Note_Of_Probability_And_Statistics/#乘法公式"
+  click tf href "https://devexzh.github.io/2023/Note_Of_Probability_And_Statistics/#全概率公式"
+</code></pre>
+<h2 id="随机试验">随机试验</h2>
+<table>
+
+<thead>
+<tr class="header">
+<th style="text-align: center;">名词</th>
+<th style="text-align: left;">释义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">确定性现象</td>
+<td style="text-align: left;">结果呈确定性的现象</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">随机现象</td>
+<td style="text-align: left;">在个别试验中呈现不确定性，在大量重复实验中表现出统计规律性的现象</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">随机试验</td>
+<td style="text-align: left;">对随机现象的实现或对其观察 (e.g.
+投币观察向上的面)</td>
+</tr>
+</tbody>
+</table>
+<p>随机试验的特点</p>
+<ol type="1">
+<li>相同条件下<strong>可重复</strong></li>
+<li>试验<strong>结果明确可知</strong>，且一般不止一个</li>
+<li>试验前<strong>不能确定</strong>哪个结果出现</li>
+</ol>
+<h2 id="样本空间与随机事件">样本空间与随机事件</h2>
+<table>
+
+<thead>
+<tr class="header">
+<th style="text-align: center;">名词</th>
+<th style="text-align: left;">释义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">样本空间</td>
+<td style="text-align: left;">将随机试验 <span class="math inline">\(E\)</span> 所有可能的结果组成的集合称为 <span class="math inline">\(E\)</span> 的样本空间 (Sample Space)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">样本点</td>
+<td style="text-align: left;">样本空间的元素即为样本点</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">随机事件</td>
+<td style="text-align: left;"><span class="math inline">\(E\)</span>
+的样本空间的子集为 <span class="math inline">\(E\)</span>
+的随机事件</td>
+</tr>
+</tbody>
+</table>
+<h2 id="频率与概率">频率与概率</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">频率</th>
+<th style="text-align: center;">概率</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">定义</td>
+<td style="text-align: center;">事件发生的频数与试验总数之间的比值</td>
+<td style="text-align: center;">事件发生的可能性大小</td>
+</tr>
+</tbody>
+</table>
+<p>概率的基本性质：</p>
+<ol type="1">
+<li>非负性：任一事件 <span class="math inline">\(A\)</span>，<span class="math inline">\(P(A)\geq 0\)</span></li>
+<li>规范性：必然事件 <span class="math inline">\(S\Rightarrow
+P(S)=1\)</span>（反之不对）</li>
+<li>可列可加性：设 <span class="math inline">\(A_1,\,A_2,\,\cdots,\,A_n\)</span>
+两两互不相容，则必有 <span class="math inline">\(P\left(A_1\cup
+A_2\cup\cdots \cup A_n\right)=P(A_1)+P(A_2)+\cdots+P(A_n)\)</span></li>
+</ol>
+<p>重要性质：</p>
+<ol type="1">
+<li><span class="math inline">\(P(\emptyset)=0\)</span>：不可能事件的概率为
+0，反之不对</li>
+<li>若 <span class="math inline">\(A\subset B\)</span>，则 <span class="math inline">\(P(A)\leq P(B)\)</span>（当且仅当 <span class="math inline">\(A=B\)</span> 时等号成立）
+<ul>
+<li>特别地，<span class="math inline">\(ABC\subset AB\)</span></li>
+</ul></li>
+<li><span class="math inline">\(P\left(A\cup
+B\right)=P(A)+P(B)-P(AB)\)</span>
+<ul>
+<li>推广：<span class="math inline">\(P\left(A\cup B\cup
+C\right)=P(A)+P(B)+P(C)-P(AB)-P(BC)-P(AC)+P(ABC)\)</span></li>
+<li>容斥原理：所有奇数个事件积的概率减去所有偶数个事件积的概率</li>
+</ul></li>
+</ol>
+<h2 id="条件概率公式">条件概率公式</h2>
+<p>【例】将一枚硬币抛掷两次，观察其出现正反面的情况。设事件 <span class="math inline">\(A\)</span> 为 “至少有一次是 <span class="math inline">\(H\)</span>”，事件 <span class="math inline">\(B\)</span> 为 “两次掷出同一面”，求事件 <span class="math inline">\(A\)</span> 已经发生的条件下事件 <span class="math inline">\(B\)</span> 发生的概率。<br>
+【解】<span class="math inline">\(\begin{array}{l}S=\left\{HH,\,HT,\,TH,\,TT\right\}\\A=\left\{HH,\,HT,\,TH\right\}\\B=\left\{HH,\,TT\right\}\\AB=\left\{HH\right\}\end{array}\Rightarrow\begin{array}{l}P(A)=\frac34\\P(B)=\frac24\\P(AB)=\frac14\end{array}\)</span>，事件
+<span class="math inline">\(A\)</span> 发生且 <span class="math inline">\(B\)</span> 发生，只有 <span class="math inline">\(HH\)</span> 符合要求；而由于是 <span class="math inline">\(A\)</span> 已经发生，故事件 <span class="math inline">\(A\)</span> 已经发生的条件下事件 <span class="math inline">\(B\)</span> 发生的概率就是集合 <span class="math inline">\(A\)</span> 中 <span class="math inline">\(HH\)</span> 发生的概率，即 <span class="math inline">\(\frac13\)</span>。易发现 <span class="math inline">\(P(B|A)=\frac{P(BA)}{P(A)}\)</span>。</p>
+<blockquote>
+<p>设事件 <span class="math inline">\(A\)</span> 的概率 <span class="math inline">\(P(A)\gt 0\)</span>，则在事件 <span class="math inline">\(A\)</span> 发生的情况下，事件 <span class="math inline">\(B\)</span> 发生的条件概率 (<em>Conditional
+Probability</em>) 记为 <span class="math inline">\(P(B|A)\)</span>，且
+<span class="math inline">\(\displaystyle
+P(B|A)=\frac{P(BA)}{P(A)}\)</span></p>
+</blockquote>
+<h2 id="乘法公式">乘法公式</h2>
+<p>根据条件概率公式即可推得乘法公式 (<em>The Multiplication Rule for
+Conditional Probabilities</em>)：<span class="math inline">\(P(AB)=P(A)\cdot P(B|A)\)</span></p>
+<p>推广：<span class="math inline">\(P(ABCD)=P(A)\cdot P(B|A)\cdot
+P(C|AB)\cdot P(D|ABC)\)</span></p>
+<h2 id="全概率公式">全概率公式</h2>
+<p>样本空间的划分：设样本空间 <span class="math inline">\(S\)</span>，<span class="math inline">\(B_1,\,B_2,\,\cdots,\,B_n\)</span>
+是一组事件，若：</p>
+<ol type="1">
+<li><span class="math inline">\(B_iB_j=\emptyset\quad(i\neq
+j,\;i,\,j\in[1,\,n])\)</span></li>
+<li><span class="math inline">\(\displaystyle\bigcup^n_{i=1}B_i=S\)</span></li>
+</ol>
+<p>则 <span class="math inline">\(B_1,\,B_2,\,\cdots,\,B_n\)</span> 为
+<span class="math inline">\(S\)</span> 的一个<strong>划分</strong>
+(<em>partition</em>)。</p>
+<blockquote>
+<p>设 <span class="math inline">\(E\)</span> 的样本空间为 <span class="math inline">\(S\)</span>，<span class="math inline">\(A\)</span>
+是 <span class="math inline">\(E\)</span> 的一个事件，<span class="math inline">\(B_1,\,B_2,\,\cdots,\,B_n\)</span> 为 <span class="math inline">\(S\)</span> 的一个划分，且 <span class="math inline">\(P(B_i)\gt 0\quad
+(i=1,\,2,\,\cdots,\,n)\)</span>，则： <span class="math display">\[P(A)=P(B_1)P(A|B_1)+P(B_2)P(A|B_2)+\cdots+P(B_n)P(A|B_n)\]</span></p>
+</blockquote>
+<p>【证明】<span class="math inline">\(A=A\cap S=A\cap\left(B_1\cup
+B_2\cup\cdots\cup B_n\right)=AB_1\cup AB_2\cup\cdots\cup
+AB_n\)</span>，因为 <span class="math inline">\(B_i\)</span> 和 <span class="math inline">\(B_j\)</span> 互不相容，故 <span class="math inline">\(AB_i\)</span> 和 <span class="math inline">\(AB_j\)</span> 也互不相容（<span class="math inline">\(AB_i\subset
+B_i\)</span>）。根据互斥事件的可列可加性，故 <span class="math inline">\(\newcommand\b[1]{\left(#1\right)}P\b{A}=P\b{AB_1\cup
+AB_2\cup\cdots\cup AB_n}=\)</span> <span class="math inline">\(\newcommand\b[1]{\left(#1\right)}P\b{AB_1}+P\b{AB_2}+\cdots+P\b{AB_n}\)</span>
+<span class="math inline">\(=\newcommand\b[1]{\left(#1\right)}P\b{B_1}P\b{A|B_1}+P\b{B_2}P\b{A|B_2}+\cdots+P\b{B_n}P\b{A|B_n}\)</span>。</p>
+<h2 id="bayes-公式"><span class="math inline">\(Bayes\)</span> 公式</h2>
+<blockquote>
+<p>设试验 <span class="math inline">\(E\)</span> 的样本空间 <span class="math inline">\(S\)</span>，<span class="math inline">\(A\)</span>
+是 <span class="math inline">\(E\)</span> 的一个事件，<span class="math inline">\(B_1,\,B_2,\,\cdots,\,B_n\)</span> 为 <span class="math inline">\(S\)</span> 的一个划分，且 <span class="math inline">\(P(A)\gt 0\)</span>，<span class="math inline">\(P(B_i)\gt 0\quad
+(i=1,\,2,\,\cdots,\,n)\)</span>，则： <span class="math display">\[P\left(B_i|A\right)=\frac{P\left(B_i\right)\cdot
+P\left(A|B_i\right)}{\displaystyle\sum^n_{j=1}P\left(B_j\right)\cdot
+P\left(A|B_j\right)}\]</span></p>
+</blockquote>
+<p>【推导】<span class="math inline">\(P\left(B_i|A\right)\xlongequal{条件概率公式}\frac{P\left(B_iA\right)}{P\left(A\right)}\xlongequal[全概率公式]{乘法公式}\frac{P\left(B_i\right)\cdot
+P\left(A|B_i\right)}{\sum^n_{j=1}P\left(B_j\right)\cdot
+P\left(A|B_j\right)}\)</span></p>
+<h2 id="事件的关系">事件的关系</h2>
+<h3 id="事件的独立性">事件的独立性</h3>
+<p><strong>〔定义〕</strong> 设 <span class="math inline">\(A,\,B\)</span> 为两事件，若满足 <span class="math inline">\(P(AB)=P(A)\cdot P(B)\)</span>，则称 <span class="math inline">\(A,\,B\)</span> 相互独立。</p>
+<hr>
+<h1 id="随机变量及其分布">随机变量及其分布</h1>
+<pre><code class=" mermaid">flowchart TB;
+title(随机变量及其分布) --- rv(随机变量) &amp; drv(离散型随机变量及其分布律) &amp; pf(随机变量的分布函数) &amp; crv(连续型随机变量及其概率密度) &amp; dist(随机变量的函数的分布)
+</code></pre>
+<p>随机变量 (Random Variable, <em>r.v.</em>)：随机试验 <span class="math inline">\(E\)</span> 的样本空间 <span class="math inline">\(S={e},\,X=X(e)\)</span> （<span class="math inline">\(e\)</span> 为样本点）是定义在 <span class="math inline">\(S\)</span> 上的<strong>实值单值</strong>函数，则称
+<span class="math inline">\(X=X(e)\)</span> 是随机变量（每个样本点 <span class="math inline">\(e\)</span> 都对应了一个实数 <span class="math inline">\(X\)</span>）</p>
+<h2 id="离散型随机变量及其分布">离散型随机变量及其分布</h2>
+<p>离散型随机变量的取值是有限多个或者可列无穷多个的随机变量</p>
+<table>
+
+<thead>
+<tr class="header">
+<th style="text-align: center;">分布</th>
+<th style="text-align: center;">背景</th>
+<th style="text-align: center;">分布律</th>
+<th style="text-align: center;">记号</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0-1 Distribution</td>
+<td style="text-align: center;">描述一次 Bernoulli 试验中发生的概率</td>
+<td style="text-align: center;"><span class="math inline">\(P\left\{X=1\right\}=p\)</span><span class="math inline">\(P\left\{X=0\right\}=1-p\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\sim
+B(1,\,p)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Binomial Distribution</td>
+<td style="text-align: center;">描述 <span class="math inline">\(n\)</span> 重 Bernoulli 试验中发生 <span class="math inline">\(k\)</span> 次的概率</td>
+<td style="text-align: center;"><span class="math inline">\(P\left\{X=k\right\}=C^k_np^k\left(1-p\right)^{n-k}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\sim
+B(n,\,p)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Geometric Distribution</td>
+<td style="text-align: center;">Bernoulli 试验第 <span class="math inline">\(k\)</span> 次才发生</td>
+<td style="text-align: center;"><span class="math inline">\(P\left\{X=k\right\}=\left(1-p\right)^{k-1}p\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\sim
+G(p)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Poisson Distribution</td>
+<td style="text-align: center;">近似求解二项分布</td>
+<td style="text-align: center;"><span class="math inline">\(P\left\{X=k\right\}=\frac{\lambda^k}{k!}e^{-\lambda}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\sim
+P(\lambda)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Hypergeometric Distribution</td>
+<td style="text-align: center;"><span class="math inline">\(N\)</span>
+件产品中有 <span class="math inline">\(M\)</span> 件不合格品，从中随机抽
+<span class="math inline">\(n\)</span> 件，其中有 <span class="math inline">\(k\)</span> 件不合格的概率</td>
+<td style="text-align: center;"><span class="math inline">\(P\left\{X=k\right\}=\displaystyle\frac{C_M^kC_{N-M}^{n-k}}{C_N^n}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\sim
+H(N,\,M,\,n)\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="随机变量的分布函数">随机变量的分布函数</h3>
+<p><strong>〔定义〕</strong> 设 <span class="math inline">\(X\)</span>
+是随机变量，<span class="math inline">\(x\)</span> 是任意实数，则 <span class="math display">\[F\left(x\right)=P\left\{X\leq x\right\},\quad
+-\infty\lt x\lt +\infty\]</span> 是 <span class="math inline">\(X\)</span> 的分布函数。</p>
+<p><strong>性质</strong></p>
+<ol type="1">
+<li><span class="math inline">\(0\leq F\left(x\right)\leq
+1\)</span></li>
+<li>单调不减性：对于 <span class="math inline">\(\forall x_1\lt
+x_2\)</span>，有 <span class="math inline">\(F\left(x_1\right)\leq
+F\left(x_2\right)\)</span></li>
+<li>规范性：<span class="math inline">\(F\left(-\infty\right)=0,\quad
+F\left(+\infty\right)=1\)</span></li>
+<li>右连续性：<span class="math inline">\(\displaystyle\lim_{x\to
+x_0^+}F\left(x\right)=F\left(x_0\right)\)</span></li>
+</ol>
+<h2 id="连续型随机变量及其分布">连续型随机变量及其分布</h2>
+<pre><code class=" mermaid">flowchart LR;
+  pdf(概率密度函数&lt;br/&gt;&lt;i&gt;p.d.f&lt;/i&gt;)--&gt;|变上限积分|cdf(分布函数&lt;br/&gt;&lt;i&gt;c.d.f&lt;/i&gt;)
+</code></pre>
+<p><strong>〔定义〕</strong> 设随机变量 <span class="math inline">\(X\)</span> 的累积分布函数 (Cumulative Distribution
+Function, <em>c.d.f</em>) 为 <span class="math inline">\(F(x)\)</span>，若存在连续、可积的函数 <span class="math inline">\(f(x)\)</span> 使得任意 <span class="math inline">\(x\)</span> 都有 <span class="math display">\[P\left\{X\leq
+x\right\}=F\left(x\right)=\int_{-\infty}^x{f\left(t\right)dt}\]</span>
+则 <span class="math inline">\(f(x)\)</span> 为随机变量 <span class="math inline">\(X\)</span> 的概率密度函数 (Probability Density
+Function, <em>p.d.f</em>)。</p>
+<h3 id="分布">分布</h3>
+<table>
+
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">均匀分布</th>
+<th style="text-align: center;">指数分布</th>
+<th style="text-align: center;">正态分布</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">英文</td>
+<td style="text-align: center;">Uniform Distribution</td>
+<td style="text-align: center;">Exponential Distribution</td>
+<td style="text-align: center;">Normal Distribution</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">概率密度函数 <span class="math inline">\(f\left(x\right)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left\{\begin{array}{cl}\dfrac{1}{b-a}&amp;a\lt
+x\lt b\\0&amp;\mathrm{otherwise}\end{array}\right.\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left\{\begin{array}{cl}\lambda e^{-\lambda
+x}&amp;x\gt 0\\0&amp;x\leq 0\end{array}\right.\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{\left(x-\mu\right)^2}{2\sigma^2}}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">记号</td>
+<td style="text-align: center;"><span class="math inline">\(X\sim
+U(a,\,b)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\sim
+E(\lambda)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(X\sim
+N\left(\mu,\,\sigma^2\right)\)</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="正态分布的性质">正态分布的性质</h4>
+<p><span class="github-emoji"><span>📓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4d3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 当 <span class="math inline">\(\mu=0,\,\sigma=1\)</span>
+时，为标准正态分布 <span class="math inline">\(\varphi\left(x\right)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}\)</span></p>
+<ol type="1">
+<li>在 <span class="math inline">\(x=\mu\)</span>
+时，正态分布的概率密度函数取到最大值：<span class="math inline">\(f\left(x\right)_{\mathrm{max}}=f\left(\mu\right)=\frac{1}{\sqrt{2\pi}\sigma}\)</span></li>
+<li>标准正态分布函数的对称性：<span class="math inline">\(\Phi\left(x\right)+\Phi\left(-x\right)=1\)</span></li>
+<li>在计算中常常可以通过凑正态分布计算 <span class="math inline">\(\displaystyle\int_{-\infty}^{+\infty}e^{-\frac{t^2}{2}}dt=\sqrt{\pi}\)</span></li>
+</ol>
+<hr>
+<h1 id="多维随机变量及其分布">多维随机变量及其分布</h1>
+<pre><code class=" mermaid">flowchart TB;
+title(多维随机变量及其分布) --- trv(二维随机变量) &amp; mdist(边缘分布) &amp; cdist(条件分布) &amp; indeptrv(相互独立的随机变量) &amp; trvdist(两个随机变量的函数的分布)
+</code></pre>
+<h2 id="边缘分布">边缘分布</h2>
+<p>边缘密度函数 <span class="math display">\[\begin{array}{}\displaystyle
+f_X(x)=\int_{-\infty}^{+\infty}f(x,\,y)dy\\[12pt] \displaystyle
+f_Y(y)=\int_{-\infty}^{+\infty}f(x,\,y)dx\end{array}\]</span></p>
+<p>条件密度函数：联合密度函数比边缘密度函数 <span class="math display">\[f_{Y|X}\left(y|x\right)=\dfrac{f(x,\,y)}{f_X(x)}\]</span></p>
+<p>二维随机变量 <span class="math inline">\((X,\,Y)\)</span>
+的联合概率密度函数 <span class="math inline">\(f(x,\,y)\)</span>、联合分布函数 <span class="math inline">\(F(x,\,y)\)</span>。则边缘分布函数为： <span class="math display">\[F_X(x)=F(x,\,+\infty)=\int_{-\infty}^{x}f_X(x)dx=\int_{-\infty}^{x}\int_{-\infty}^{+\infty}{f(x,\,y)dy}dx\]</span>
+<span class="math display">\[F_Y(y)=F(+\infty,\,y)=\int_{-\infty}^{y}f_Y(y)dy=\int_{-\infty}^{y}\int_{-\infty}^{+\infty}{f(x,\,y)dx}dy\]</span></p>
+<p>判断两个随机变量是否独立：两个边缘概率密度相乘是否等于联合概率密度</p>
+<h1 id="随机变量的数字特征">随机变量的数字特征</h1>
+<h2 id="数学期望">数学期望</h2>
+<p><span class="math display">\[E(X)=\int_{-\infty}^{+\infty}xf(x)dx\]</span></p>
+<h2 id="方差">方差</h2>
+<p><span class="math display">\[D(X)=E(X^2)-E^2(X)\]</span></p>
+<h2 id="常见分布的期望与方差">常见分布的期望与方差</h2>
+<table>
+
+<thead>
+<tr class="header">
+<th style="text-align: center;">分布</th>
+<th style="text-align: center;">期望</th>
+<th style="text-align: center;">方差</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Binomial Distribution <br>
+二项分布</td>
+<td style="text-align: center;"><span class="math inline">\(np\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(np(1-p)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Poisson Distribution <br> 泊松分布</td>
+<td style="text-align: center;"><span class="math inline">\(\lambda\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\lambda\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Geometric Distribution <br>
+几何分布</td>
+<td style="text-align: center;"><span class="math inline">\(\dfrac{1}{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\dfrac{1-p}{p^2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Hypergeometric Distribution <br>
+超几何分布</td>
+<td style="text-align: center;"><span class="math inline">\(n\cdot\dfrac{M}{N}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Uniform Distribution <br> 均匀分布</td>
+<td style="text-align: center;"><span class="math inline">\(\dfrac{a+b}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\dfrac{(b-a)^2}{12}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Exponential Distribution <br>
+指数分布</td>
+<td style="text-align: center;"><span class="math inline">\(\dfrac{1}{\lambda}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\dfrac{1}{\lambda^2}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Normal Distribution <br> 正态分布</td>
+<td style="text-align: center;"><span class="math inline">\(\mu\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sigma^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="大数定律与中心极限定理">大数定律与中心极限定理</h1>
+<p><strong>依概率收敛</strong>  设 <span class="math inline">\(X_1,\,X_2,\,\cdots,\,X_n,\,\cdots\)</span>
+是相互独立的一列随机变量，<span class="math inline">\(X\)</span>
+是一个随机变量，若对任意正数 <span class="math inline">\(\varepsilon\)</span>，有 <span class="math inline">\(\displaystyle\lim_{n\to\infty}P\left(\left|X_n-X\right|\lt\varepsilon\right)=1\)</span>，则称
+<span class="math inline">\(X_1,\,X_2,\,\cdots,\,X_n,\,\cdots\)</span>依概率收敛于
+<span class="math inline">\(X\)</span>，通常记作 <span class="math inline">\(X_n\xrightarrow{P}X\)</span>。</p>
+<p><span class="github-emoji"><span>📓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4d3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 人话：做的次数足够大的时候，<span class="math inline">\(X_n\)</span> 和 <span class="math inline">\(X\)</span> 无限接近</p>
+<h2 id="大数定律">大数定律</h2>
+<p>本质：算术平均依概率收敛于统计平均 <span class="math inline">\(\frac{1}{n}\sum_{i=1}^{n}X_i\xrightarrow{P}E\left(\frac{1}{n}\sum_{i=1}^{n}X_i\right)\)</span></p>
+<h2 id="中心极限定理">中心极限定理</h2>
+<p>本质：<span class="math inline">\(n\)</span>
+个独立同分布的随机变量之和近似服从正态分布。</p>
+<p><strong>Chebyshev 不等式</strong> <span class="math display">\[P\left\{\left|X-E(X)\right|\geq\varepsilon\right\}\leq\frac{D(X)}{\varepsilon^2}\]</span></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">学习笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%B0%E5%AD%A6/">#数学</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>概率论笔记</div>
+      <div>https://devexzh.github.io/2023/Note_Of_Probability_And_Statistics/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Ryker Zhu</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年4月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/Note_Of_ACM_ICPC_Contest/" title="ACM/ICPC 竞赛笔记">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ACM/ICPC 竞赛笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/Remarques_Pour_Le_Francais/" title="Remarques pour le français">
+                        <span class="hidden-mobile">Remarques pour le français</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"neutral"});
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('mermaid' in window) {
+        mermaid.init();
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://github.com/DevExzh" target="_blank" rel="nofollow noopener"><span>Copyright © 2023 Ryker Zhu</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/live2d.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
