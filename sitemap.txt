@@ -1,3 +1,4 @@
+https://devexzh.github.io/2023/Note_Of_Computer_Network_Technology/
 https://devexzh.github.io/2023/LaTeX_Reference_Manual/
 https://devexzh.github.io/2023/Note_Of_Advanced_Mathematics/
 https://devexzh.github.io/2023/Note_Of_Probability_And_Statistics/
@@ -20,6 +21,7 @@ https://devexzh.github.io/tags/LaTeX/
 https://devexzh.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/
 https://devexzh.github.io/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/
 https://devexzh.github.io/tags/%E6%95%B0%E5%AD%A6/
+https://devexzh.github.io/tags/%E7%BD%91%E7%BB%9C/
 https://devexzh.github.io/tags/%E7%94%B5%E8%B7%AF/
 https://devexzh.github.io/tags/%E7%AE%97%E6%B3%95/
 https://devexzh.github.io/tags/%E7%89%A9%E7%90%86/
