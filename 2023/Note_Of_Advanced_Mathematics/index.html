@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://devexzh.github.io/img/calculus-on-blackboard.jpg">
 <meta property="article:published_time" content="2023-01-31T08:39:06.025Z">
-<meta property="article:modified_time" content="2023-05-28T15:33:50.735Z">
+<meta property="article:modified_time" content="2023-06-03T08:00:03.069Z">
 <meta property="article:author" content="Ryker Zhu">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary_large_image">
@@ -207,7 +207,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          22k 字
+          24k 字
         
       </span>
     
@@ -218,7 +218,7 @@
         
         
         
-          36 分钟
+          40 分钟
         
       </span>
     
@@ -729,6 +729,15 @@ d\theta\]</span></p></li>
 <h3 id="曲线积分">曲线积分</h3>
 <p><span class="math display">\[\oint_L\]</span></p>
 <h4 id="对弧长的曲线积分第一类">对弧长的曲线积分（第一类）</h4>
+<ol type="1">
+<li><p>化简</p>
+<ul>
+<li>利用对称性化简</li>
+<li>将曲线 <span class="math inline">\(L\)</span>
+的方程代入被积函数化简</li>
+<li>利用形心公式化简</li>
+</ul></li>
+</ol>
 <h4 id="对坐标的曲线积分第二类">对坐标的曲线积分（第二类）</h4>
 <h5 id="green-公式"><span class="math inline">\(Green\)</span> 公式</h5>
 <p><span class="math display">\[\oint_L
@@ -750,18 +759,72 @@ z}\\P&amp;Q&amp;R\end{vmatrix}dS\]</span></p>
 <h4 id="对面积的曲面积分第一类">对面积的曲面积分（第一类）</h4>
 <h4 id="对坐标的曲面积分第二类">对坐标的曲面积分（第二类）</h4>
 <h5 id="gauss-公式"><span class="math inline">\(Gauss\)</span> 公式</h5>
-<p><span class="math display">\[\oiint_\Sigma
-Pdydz+Qdzdx+Rdxdy=\iiint_\Omega\left(\frac{\partial P}{\partial
+<p><span class="math display">\[\oiint\limits_\Sigma
+Pdydz+Qdzdx+Rdxdy=\iiint\limits_\Omega\left(\frac{\partial P}{\partial
 x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial
 z}\right)dv\]</span></p>
 <h1 id="无穷级数">无穷级数</h1>
 <p>Infinite Series</p>
 <h2 id="数项级数">数项级数</h2>
+<p>常见级数的敛散性</p>
+<table>
+
+<thead>
+<tr class="header">
+<th style="text-align: center;">名称</th>
+<th style="text-align: center;">表达式</th>
+<th style="text-align: center;">敛散性</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(p-\)</span>级数</td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\sum_{i=1}^\infty\dfrac{1}{n^p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\begin{array}{ll}p\gt1&amp;收敛\\p\leq1&amp;发散\end{array}\)</span></td>
+</tr>
+</tbody>
+</table>
 <h3 id="比较审敛法">比较审敛法</h3>
-<h2 id="幂级数">幂级数</h2>
+<p>设级数 <span class="math inline">\(\displaystyle\sum_{i=1}^\infty
+u_n\)</span> 和 <span class="math inline">\(\displaystyle\sum_{i=1}^\infty v_n\)</span>
+都是正项级数，且 <span class="math inline">\(u_n\leq
+v_n\;\left(n=1,\,2,\,\cdots\right)\)</span></p>
+<ol type="1">
+<li>若 <span class="math inline">\(\displaystyle\sum_{i=1}^\infty
+v_n\)</span> 收敛，则 <span class="math inline">\(\displaystyle\sum_{i=1}^\infty u_n\)</span>
+收敛</li>
+<li>若 <span class="math inline">\(\displaystyle\sum_{i=1}^\infty
+u_n\)</span> 发散，则 <span class="math inline">\(\displaystyle\sum_{i=1}^\infty v_n\)</span>
+发散</li>
+</ol>
 <h3 id="比值审敛法">比值审敛法</h3>
+<p>设级数 <span class="math inline">\(\displaystyle\sum_{i=1}^\infty
+u_n\)</span> 是正项级数，若其后项与前项之比值的极限等于 <span class="math inline">\(\rho\)</span>，即 <span class="math inline">\(\displaystyle\lim_{n\to\infty}\dfrac{u_{n+1}}{u_n}=\rho\)</span>，则
+1. 若 <span class="math inline">\(p\lt1\)</span>，级数收敛； 2. 若 <span class="math inline">\(p\gt1\)</span>，级数发散； 3. 若 <span class="math inline">\(p=1\)</span>，敛散性未知。</p>
+<h3 id="根值审敛法">根值审敛法</h3>
+<p>设级数 <span class="math inline">\(\displaystyle\sum_{i=1}^\infty
+u_n\)</span> 是正项级数，若 <span class="math inline">\(\displaystyle\lim_{n\to\infty}\sqrt[n]{u_n}=\rho\)</span>，则
+1. 若 <span class="math inline">\(p\lt1\)</span>，级数收敛； 2. 若 <span class="math inline">\(p\gt1\)</span>，级数发散； 3. 若 <span class="math inline">\(p=1\)</span>，敛散性未知。</p>
+<h3 id="交错级数及其审敛法">交错级数及其审敛法</h3>
+<h4 id="莱布尼茨定理">莱布尼茨定理</h4>
+<p>如果交错级数满足条件：</p>
+<ol type="1">
+<li>数列 <span class="math inline">\(\left\{u_n\right\}\)</span>
+单调减少，即 <span class="math inline">\(u_n\geq
+u_{n+1}\;\left(n=1,\,2,\,\cdots\right)\)</span></li>
+<li><span class="math inline">\(\displaystyle\lim_{n\to\infty}u_n=0\)</span></li>
+</ol>
+<p>则级数收敛，且其和 <span class="math inline">\(s\leq
+u_1\)</span>，其余项 <span class="math inline">\(r_n\)</span> 的绝对值
+<span class="math inline">\(\left|r_n\right|\leq u_{n+1}\)</span></p>
+<h2 id="幂级数">幂级数</h2>
+<p><span class="math display">\[\sum_{n=0}^\infty a_n x^n\]</span></p>
 <h2 id="fourier-级数"><span class="math inline">\(Fourier\)</span>
 级数</h2>
+<p><span class="math display">\[f\left(x\right)=\dfrac{a_0}{2}+\sum_{k=1}^\infty\left(a_k\cos
+kx+b_k\sin kx\right)\]</span> <span class="math display">\[\begin{align*}a_k&amp;=\dfrac1\pi\int_{-\pi}^{\pi}f\left(x\right)\cos
+kxdx\quad\left(k=0,\,1,\,2,\,\cdots\right)\\b_k&amp;=\dfrac1\pi\int_{-\pi}^{\pi}f\left(x\right)\sin
+kxdx\quad\left(k=1,\,2,\,3,\,\cdots\right)\end{align*}\]</span></p>
 <h1 id="向量代数与空间解析几何">向量代数与空间解析几何</h1>
 <h2 id="向量及其线性运算">向量及其线性运算</h2>
 <h3 id="方向角与方向余弦">方向角与方向余弦</h3>
@@ -922,6 +985,51 @@ p(x)dx}\)</span></p></li>
 <p>通解：<span class="math inline">\(y=\left(\int q(x)\cdot e^{\int
 p(x)dx}dx+C\right)e^{-\int p(x)dx}\)</span></p></li>
 </ol>
+<h2 id="全微分方程">全微分方程</h2>
+<blockquote>
+<p>若 <span class="math inline">\(P\left(x,\,y\right)dx+Q\left(x,\,y\right)dy\)</span>
+的左端恰好是某个函数 <span class="math inline">\(u\left(x,\,y\right)\)</span>
+的全微分，那么该方程称为<strong>全微分方程</strong></p>
+</blockquote>
+<p>判定全微分方程的充要条件： <span class="math display">\[\dfrac{\partial P}{\partial y}=\dfrac{\partial
+Q}{\partial x}\]</span></p>
+<p>求解方法：</p>
+<ol type="1">
+<li><p>直接积分法</p>
+<p><span class="math inline">\(\dfrac{\partial u}{\partial
+x}=P,\quad\dfrac{\partial u}{\partial y}=Q\)</span></p></li>
+<li><p>利用第二类曲线积分的路径无关性</p></li>
+<li><p>凑微分法</p></li>
+</ol>
+<h2 id="常系数齐次线性微分方程">常系数齐次线性微分方程</h2>
+<p>求二阶常系数齐次线性微分方程通解的步骤： 1. 写出微分方程 <span class="math inline">\(y^{\prime\prime}+py^{\prime}+qy=0\)</span>
+的特征方程 <span class="math inline">\(r^2+pr+q=0\)</span> 2.
+求出特征方程的两个根 <span class="math inline">\(r_1\)</span>, <span class="math inline">\(r_2\)</span>； 3.
+根据特征根的不同情况，按下表写出方程的通解</p>
+<table>
+
+<thead>
+<tr class="header">
+<th style="text-align: center;">特征方程的根</th>
+<th style="text-align: center;">微分方程的通解</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">两个不等实根 <span class="math inline">\(r_1,\,r_2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(y=C_1e^{r_1x}+C_2e^{r_2x}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">两个相等实根 <br> <span class="math inline">\(r_1=r_2=-\dfrac{p}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(y=\left(C_1+C_2x\right)e^{r_1x}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">一对共轭复根 <br> <span class="math inline">\(r_{1,2}=\alpha\pm\beta i\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(y=e^{\alpha
+x}\left(C_1\cos\beta x+C_2\sin\beta x\right)\)</span></td>
+</tr>
+</tbody>
+</table>
 
                 
               </div>
