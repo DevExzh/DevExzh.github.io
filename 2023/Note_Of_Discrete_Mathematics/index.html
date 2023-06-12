@@ -20,19 +20,22 @@
   
     <meta name="description" content="Logic of Compound Statements Concepts     Concept Meaning     Statement or Proposition A sentence that is true or false but not both.   Argument A sequence of statements aimed at demonstrating the tru">
 <meta property="og:type" content="article">
-<meta property="og:title" content="杂货小铺">
+<meta property="og:title" content="离散数学笔记">
 <meta property="og:url" content="https://devexzh.github.io/2023/Note_Of_Discrete_Mathematics/">
 <meta property="og:site_name" content="杂货小铺">
 <meta property="og:description" content="Logic of Compound Statements Concepts     Concept Meaning     Statement or Proposition A sentence that is true or false but not both.   Argument A sequence of statements aimed at demonstrating the tru">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://devexzh.github.io/img/MxE30U.jpg">
 <meta property="article:published_time" content="2023-05-29T11:33:23.890Z">
-<meta property="article:modified_time" content="2023-06-06T10:18:03.050Z">
+<meta property="article:modified_time" content="2023-06-12T12:59:36.255Z">
 <meta property="article:author" content="Ryker Zhu">
+<meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://devexzh.github.io/img/MxE30U.jpg">
   
   
   
-  <title>杂货小铺</title>
+  <title>离散数学笔记 - 杂货小铺</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -175,13 +178,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/MxE30U.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="离散数学笔记"></span>
           
         </div>
 
@@ -204,7 +207,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6.1k 字
+          8.3k 字
         
       </span>
     
@@ -215,7 +218,7 @@
         
         
         
-          11 分钟
+          14 分钟
         
       </span>
     
@@ -253,7 +256,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">离散数学笔记</h1>
             
             
               <div class="markdown-body">
@@ -311,12 +314,49 @@ true</em></strong> or <strong><em>true by default</em></strong>.</p>
 whenever the premises are all true (A row of the truth table in which
 all premises are true is called a <strong><em>critical
 row</em></strong>)</p>
-<h1 id="logic-of-quantified-statements">Logic of Quantified
-Statements</h1>
 <h1 id="number-theory-method-of-proof">Number Theory &amp; Method of
 Proof</h1>
+<h2 id="unique-factorization-of-integers">Unique Factorization of
+Integers</h2>
+<p>Given any integer <span class="math inline">\(n &gt; 1\)</span>,
+there exist a positive integer <span class="math inline">\(k\)</span>,
+distinct prime numbers <span class="math inline">\(p_1,\,p_2,\,\cdots,\,p_k\)</span>, and positive
+integers <span class="math inline">\(e_1,\,e_2,\,\cdots,\,e_k\)</span>
+such that <span class="math display">\[n=p_1^{e_1}p_2^{e_2}p_3^{e_3}\cdots
+p_k^{e_k}\]</span> <span class="math inline">\(n\)</span> is called
+<strong>standard factored form</strong> of <span class="math inline">\(n\)</span> when <span class="math inline">\(p_1&lt;p_2&lt;\cdots&lt;p_k\)</span></p>
+<h2 id="the-quotient-remainder-theorem">The Quotient-Remainder
+Theorem</h2>
+<p>Given any integer <span class="math inline">\(n\)</span> and positive
+integer <span class="math inline">\(d\)</span>, there exist unique
+integers <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> such that <span class="math inline">\(n
+= dq + r\)</span> and <span class="math inline">\(0 \leq r &lt;
+d\)</span></p>
+<h2 id="euclidean-algorithm">Euclidean Algorithm</h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">gcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> </span>{ <span class="hljs-keyword">return</span> b == <span class="hljs-number">0</span> ? a : <span class="hljs-built_in">gcd</span>(b, a % b); }<br></code></pre></td></tr></tbody></table></figure>
+<ul>
+<li>If <span class="math inline">\(r\)</span> is a positive integer,
+then <span class="math inline">\(\gcd(r,\,0) = r\)</span></li>
+<li>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are any non-zero integers, and if <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> are any integers such that <span class="math inline">\(a = bq + r\)</span>, then <span class="math inline">\(\gcd(a,\,b) = \gcd(b,\,r)\)</span></li>
+</ul>
 <h1 id="sequences-mathematical-induction-and-recursion">Sequences,
 Mathematical Induction, and Recursion</h1>
+<h2 id="second-order-linear-homogeneous-recurrence-relation-with-constant-coefficients">Second-order
+linear homogeneous recurrence relation with constant coefficients</h2>
+<p><span class="math inline">\(a_k = Aa_{k−1} + Ba_{k−2}\)</span> <span class="math inline">\(\forall\)</span> integers <span class="math inline">\(k\ge\)</span> some fixed integer, <span class="math inline">\(A,\,B\)</span> are fixed real numbers with <span class="math inline">\(B \neq 0\)</span></p>
+<h3 id="characteristic-equation">Characteristic Equation</h3>
+<p>Suppose a sequence <span class="math inline">\(a_0,\,a1,\,a_2,\,\cdots\)</span> satisfies a
+recurrence relation <span class="math inline">\(a_k = Aa_{k−1} +
+Ba_{k−2}\)</span> for some real numbers <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> with <span class="math inline">\(B \neq
+0\)</span> and all integers k ≥ 2. If the characteristic equation <span class="math inline">\(t^2 − At − B = 0\)</span> has</p>
+<ul>
+<li>Two distinct roots <span class="math inline">\(r\)</span> and <span class="math inline">\(s\)</span>, then <span class="math inline">\(a_n=Cr^n+Ds^n\)</span></li>
+<li>A single (real) root <span class="math inline">\(r\)</span>, then
+<span class="math inline">\(a_n=Cr^n+Dnr^n\)</span></li>
+</ul>
+<p>where <span class="math inline">\(C\)</span> and <span class="math inline">\(D\)</span> are the numbers whose values are
+determined by the values <span class="math inline">\(a_0\)</span> and
+<span class="math inline">\(a_1\)</span></p>
 <h1 id="set-theory">Set Theory</h1>
 <h2 id="subset">Subset</h2>
 <p><strong>Notation</strong> <span class="math inline">\(A=\left\{x\in
@@ -393,15 +433,47 @@ set <span class="math inline">\(A\)</span> if and only if:</p>
 <li><span class="math inline">\(A_1, A_2,\,A_3,\,\cdots\)</span> are
 mutually disjoint</li>
 </ul>
-<h2 id="power-set">Power Set</h2>
 <h1 id="functions">Functions</h1>
+<p>Categories of functions:</p>
+<ul>
+<li>One-to-one function: <span class="math inline">\(\forall
+x_1\;\mathrm{and}\;x_2\in X,
+\;\mathrm{if}\;F(x_1)=F(x_2),\;\mathrm{then}\;x_1=x_2\)</span></li>
+<li>Onto function: <span class="math inline">\(\forall y\in Y,\;\exists
+x\in X\;\mathrm{such\,that}\;F(x)=y\)</span></li>
+</ul>
+<p>A <strong>one-to-one correspondence</strong> (or bijection) from a
+set <span class="math inline">\(X\)</span> to a set <span class="math inline">\(Y\)</span> is a function <span class="math inline">\(F:X\rightarrow Y\)</span> that is both one-to-one
+and onto.</p>
+<h3 id="cardinality">Cardinality</h3>
+<p><em>Definition</em> The size of the set, denoted by <span class="math inline">\(|A|\)</span> for a set <span class="math inline">\(A\)</span>.</p>
+<ul>
+<li>Finite set is <span class="math inline">\(\emptyset\)</span> or a
+set <span class="math inline">\(\textcolor{orange}{\mathrm{can}}\)</span> be put
+into one-to-one correspondence with <span class="math inline">\(\mathbf{Z}^+\)</span></li>
+<li>Infinite set is a nonempty or a set <span class="math inline">\(\textcolor{orange}{\mathrm{cannot}}\)</span> be
+put into one-to-one correspondence with <span class="math inline">\(\mathbf{Z}^+\)</span></li>
+</ul>
+<p>Set <span class="math inline">\(A\)</span> has the same cardinality
+as set <span class="math inline">\(B\)</span>, if and only if there is a
+one-to-one correspondence from <span class="math inline">\(A\)</span> to
+<span class="math inline">\(B\)</span>.</p>
+<ul>
+<li><p>A set is called <strong>countable</strong>, if and only if it is
+finite or countably infinite.</p>
+<ul>
+<li>A set is called <strong>countably infinite</strong>, if and only if
+it has the same cardinality as the set of <span class="math inline">\(\mathbf{Z}^+\)</span>.</li>
+</ul></li>
+<li><p>A set that is not countable is called uncountable.</p></li>
+</ul>
 <h1 id="relations">Relations</h1>
 <h2 id="relation">Relation</h2>
 <p>Partial Order Relation: denoted by <span class="math inline">\(\preceq\)</span></p>
 <h3 id="reflexive">Reflexive</h3>
 <p><strong>Explained in simpler way</strong>: Related to itself.</p>
 <h3 id="antisymmetric">Antisymmetric</h3>
-<p><strong>Definition</strong>: <span class="math inline">\(a\,\mathrm{R}\,b\,\wedge\,b\,\mathrm{R}\,a\rightarrow
+<p><strong>Definition</strong>: <span class="math inline">\(a\;\mathrm{R}\;b\,\wedge\,b\;\mathrm{R}\;a\rightarrow
 a=b\)</span></p>
 <p><strong>Explained in simpler way</strong>: Never returns back.</p>
 <h3 id="transitive">Transitive</h3>
@@ -534,7 +606,6 @@ p\right)\)</span></p>
 multiplied by <span class="math inline">\(a\)</span> then <span class="math inline">\(aS=\left\{a,\,2a,\,3a,\,\cdots,\,(p-1)a\right\}\)</span></p>
 <p>Cardinality of <span class="math inline">\(S\)</span>, i.e. <span class="math inline">\(|S|=p-1=|aS|\)</span></p>
 <p>Since any element <span class="math inline">\(x\in aS\)</span>, <span class="math inline">\(x\,\mathrm{mod}\,p\in S\)</span> as well.</p>
-<hr>
 <p>Suppose <span class="math inline">\(ra=sa\left(\mathrm{mod}\,p\right)\quad 1\leq r\lt
 s\leq (p-1)\)</span></p>
 <p><span class="math inline">\(p\vert (s-r)a\Rightarrow
@@ -542,7 +613,6 @@ p\vert(s-r)\)</span> by Euclid's Lemma, which implies <span class="math inline">
 condition</p>
 <p>Thus <span class="math inline">\(ra\not\equiv
 sa\left(\mathrm{mod}\,p\right)\)</span></p>
-<hr>
 <p><span class="math inline">\(aS\)</span> to <span class="math inline">\(S\)</span> is one-to-one correspondance so <span class="math inline">\(a\cdot 2a\cdot 3a\cdots (p-1)a\equiv
 1\cdot2\cdot3\cdots(p-1)\;(\mathrm{mod}\,p)\)</span></p>
 <p>and <span class="math inline">\(\gcd\left(p,\,(p-1)!\right)=1\)</span> would
@@ -556,6 +626,34 @@ cancel the <span class="math inline">\((p-1)!\)</span></p>
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">学习笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%B0%E5%AD%A6/">#数学</a>
+      
+    </div>
   
 </div>
 
@@ -565,7 +663,7 @@ cancel the <span class="math inline">\((p-1)!\)</span></p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
+      <div>离散数学笔记</div>
       <div>https://devexzh.github.io/2023/Note_Of_Discrete_Mathematics/</div>
     </div>
     <div class="license-meta">
@@ -684,6 +782,12 @@ cancel the <span class="math inline">\((p-1)!\)</span></p>
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -890,6 +994,49 @@ cancel the <span class="math inline">\((p-1)!\)</span></p>
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
