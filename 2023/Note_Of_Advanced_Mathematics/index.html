@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://devexzh.github.io/img/calculus-on-blackboard.jpg">
 <meta property="article:published_time" content="2023-01-31T08:39:06.025Z">
-<meta property="article:modified_time" content="2023-06-03T08:00:03.069Z">
+<meta property="article:modified_time" content="2023-06-20T15:52:03.204Z">
 <meta property="article:author" content="Ryker Zhu">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary_large_image">
@@ -207,7 +207,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          24k 字
+          27k 字
         
       </span>
     
@@ -218,7 +218,7 @@
         
         
         
-          40 分钟
+          46 分钟
         
       </span>
     
@@ -797,6 +797,7 @@ v_n\)</span> 收敛，则 <span class="math inline">\(\displaystyle\sum_{i=1}^\i
 u_n\)</span> 发散，则 <span class="math inline">\(\displaystyle\sum_{i=1}^\infty v_n\)</span>
 发散</li>
 </ol>
+<p><span class="github-emoji"><span>📓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4d3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 常用放缩，放大求证收敛；缩小求证发散。</p>
 <h3 id="比值审敛法">比值审敛法</h3>
 <p>设级数 <span class="math inline">\(\displaystyle\sum_{i=1}^\infty
 u_n\)</span> 是正项级数，若其后项与前项之比值的极限等于 <span class="math inline">\(\rho\)</span>，即 <span class="math inline">\(\displaystyle\lim_{n\to\infty}\dfrac{u_{n+1}}{u_n}=\rho\)</span>，则
@@ -818,13 +819,105 @@ u_{n+1}\;\left(n=1,\,2,\,\cdots\right)\)</span></li>
 u_1\)</span>，其余项 <span class="math inline">\(r_n\)</span> 的绝对值
 <span class="math inline">\(\left|r_n\right|\leq u_{n+1}\)</span></p>
 <h2 id="幂级数">幂级数</h2>
-<p><span class="math display">\[\sum_{n=0}^\infty a_n x^n\]</span></p>
+<p>一般形式：<span class="math inline">\(\displaystyle\sum_{n=0}^\infty
+a_n \left(x-x_0\right)^n\)</span></p>
+<p>标准形式：<span class="math inline">\(\displaystyle\sum_{n=0}^\infty
+a_n x^n\)</span></p>
+<h3 id="abel-定理"><span class="math inline">\(Abel\)</span> 定理</h3>
+<ul>
+<li>若当 <span class="math inline">\(x_0\ne 0\)</span> 时，<span class="math inline">\(\displaystyle\sum_{n=0}^\infty a_n x_0^n\)</span>
+若收敛，则 <span class="math inline">\(\displaystyle\sum_{n=0}^\infty
+a_n x^n\)</span> 在 <span class="math inline">\(\left(-\left|x_0\right|,\,\left|x_0\right|\right)\)</span>
+绝对收敛；</li>
+<li>若当 <span class="math inline">\(x_1\ne 0\)</span> 时，<span class="math inline">\(\displaystyle\sum_{n=0}^\infty a_n x_1^n\)</span>
+若发散，则 <span class="math inline">\(\displaystyle\sum_{n=0}^\infty
+a_n x^n\)</span> 在 <span class="math inline">\(\left(-\infty,\,-\left|x_0\right|\right)\cup\left(\left|x_0\right|,\,+\infty\right)\)</span>
+发散；</li>
+</ul>
+<p><span class="github-emoji"><span>⚠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 必存在 <span class="math inline">\(R\ge 0\)</span>，使得
+<span class="math inline">\(x\in\left(-R,\,R\right)\)</span> 时，<span class="math inline">\(\displaystyle\sum_{n=0}^\infty a_n x^n\)</span>
+绝对收敛；<span class="math inline">\(\left(-\infty,\,-R\right)\cup\left(R,\,+\infty\right)\)</span>
+时，<span class="math inline">\(\displaystyle\sum_{n=0}^\infty a_n
+x^n\)</span> 发散； <span class="math inline">\(x=\pm R\)</span>
+时，<strong>需要将端点值代入</strong>到 <span class="math inline">\(\displaystyle\sum_{n=0}^\infty a_n x^n\)</span>
+中以判别其敛散性。</p>
+<h4 id="求幂级数收敛半径的方法">求幂级数收敛半径的方法</h4>
+<p>方法一（缺有限项时可用）： <span class="math display">\[\left.\begin{array}{r}\displaystyle\lim_{n\to\infty}\left|\dfrac{a_{n+1}}{a_n}\right|=\rho\\[12pt]\displaystyle\lim_{n\to\infty}\sqrt[n]{\left|a_n\right|}=\rho\end{array}\right\}\Rightarrow\begin{cases}0\lt\rho\lt+\infty&amp;R=\dfrac{1}{\rho}\\\rho=0&amp;R=+\infty\\\rho=+\infty&amp;R=0\end{cases}\]</span></p>
+<p>方法二（对于任意形式的幂级数皆可用）： <span class="math display">\[\lim_{n\to\infty}\left|\dfrac{u_{n+1}(x)}{u_{n}(x)}\right|=\rho(x)\overset{\text{令}}{\lt}1\]</span>
+解得 <span class="math inline">\(x\in(a,\,b)\)</span>，收敛半径即 <span class="math inline">\(R=\dfrac{b-a}{2}\)</span></p>
+<h3 id="幂级数展开">幂级数展开</h3>
+<p>无论是将函数展开成幂级数还是将幂级数求和，都可以有如下方法：</p>
+<ol type="1">
+<li><p>套用公式（见下表）或经过变形后再套用公式；</p></li>
+<li><p>先导后积或先积后导</p>
+<ul>
+<li><span class="math inline">\(f(x)=\displaystyle\int_{0}^{x}f^\prime
+(t)dt+f(0)\)</span></li>
+</ul></li>
+</ol>
+<h4 id="常用的幂级数展开公式">常用的幂级数展开公式</h4>
+<table>
+
+<thead>
+<tr class="header">
+<th style="text-align: center;">展开式</th>
+<th style="text-align: center;">收敛半径</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle
+e^x=\sum_{n=0}^\infty\dfrac{x^n}{n!}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\infty\lt
+x\lt +\infty\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\dfrac{1}{1+x}=\sum_{n=0}^\infty
+\left(-1\right)^n x^n\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-1\lt x\lt
+1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\dfrac{1}{1-x}=\sum_{n=0}^\infty
+x^n\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-1\lt x\lt
+1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\sin{x}=\sum_{n=0}^\infty\left(-1\right)^n\dfrac{x^{2n+1}}{(2n+1)!}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\infty\lt
+x\lt +\infty\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\cos{x}=\sum_{n=0}^\infty\left(-1\right)^n\dfrac{x^{2n}}{(2n)!}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\infty\lt
+x\lt +\infty\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\ln\left(1+x\right)=\sum_{n=1}^\infty\dfrac{\left(-1\right)^{n-1}}{n}x^n\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-1\lt x\le
+1\)</span></td>
+</tr>
+</tbody>
+</table>
 <h2 id="fourier-级数"><span class="math inline">\(Fourier\)</span>
 级数</h2>
 <p><span class="math display">\[f\left(x\right)=\dfrac{a_0}{2}+\sum_{k=1}^\infty\left(a_k\cos
 kx+b_k\sin kx\right)\]</span> <span class="math display">\[\begin{align*}a_k&amp;=\dfrac1\pi\int_{-\pi}^{\pi}f\left(x\right)\cos
 kxdx\quad\left(k=0,\,1,\,2,\,\cdots\right)\\b_k&amp;=\dfrac1\pi\int_{-\pi}^{\pi}f\left(x\right)\sin
 kxdx\quad\left(k=1,\,2,\,3,\,\cdots\right)\end{align*}\]</span></p>
+<p>记 <span class="math inline">\(Fourier\)</span> 级数为 <span class="math inline">\(S(x)\)</span>，则</p>
+<ol type="1">
+<li>若 <span class="math inline">\(x_0\)</span> 为 <span class="math inline">\(f(x)\)</span> 的连续点，则 <span class="math inline">\(S(x_0)=f(x_0)\)</span>；</li>
+<li>若 <span class="math inline">\(x_0\)</span> 为 <span class="math inline">\(f(x)\)</span> 的间断点，则 <span class="math inline">\(S(x_0)=\dfrac{f_-(x_0)+f_+(x_0)}{2}\)</span></li>
+</ol>
+<p>奇偶函数的 <span class="math inline">\(Fourier\)</span> 级数：</p>
+<ul>
+<li><strong>正弦级数</strong>：设 <span class="math inline">\(f(x)\)</span> 是周期为 <span class="math inline">\(2l\)</span> 的奇函数，且满足 <span class="math inline">\(Dirichlet\)</span> 收敛定理，则其 <span class="math inline">\(Fourier\)</span> 级数为 <span class="math inline">\(S(x)=\displaystyle\sum_{n=1}^\infty
+b_n\cdot\sin{\dfrac{n\pi x}{l}}\)</span></li>
+<li><strong>余弦级数</strong>：设 <span class="math inline">\(f(x)\)</span> 是周期为 <span class="math inline">\(2l\)</span> 的偶函数，且满足 <span class="math inline">\(Dirichlet\)</span> 收敛定理，则其 <span class="math inline">\(Fourier\)</span> 级数为 <span class="math inline">\(S(x)=\dfrac{a_0}{2}+\displaystyle\sum_{n=1}^\infty
+a_n\cdot\cos{\dfrac{n\pi x}{l}}\)</span></li>
+</ul>
 <h1 id="向量代数与空间解析几何">向量代数与空间解析几何</h1>
 <h2 id="向量及其线性运算">向量及其线性运算</h2>
 <h3 id="方向角与方向余弦">方向角与方向余弦</h3>
@@ -967,14 +1060,14 @@ g(x)dx\)</span></p>
 的式子分别移到等式两边： <span class="math inline">\(\dfrac{x}{1+x^2}dx=-\dfrac{y}{1+y^2}dy\)</span>；对等式两边积分：<span class="math inline">\(\displaystyle\int\dfrac{x}{1+x^2}dx=-\int\dfrac{y}{1+y^2}dy\)</span>
 得 <span class="math inline">\(\dfrac12\ln(1+x^2)=-\dfrac12\ln(1+y^2)+\dfrac12\ln
 C\)</span>；化简可得 <span class="math inline">\(1+y^2=\dfrac{C}{1+x^2}\)</span>。</p>
-<h2 id="齐次方程">齐次方程</h2>
+<h3 id="齐次方程">齐次方程</h3>
 <p>形式：<span class="math inline">\(\dfrac{dy}{dx}=g\left(\dfrac{y}{x}\right)\)</span></p>
 <p>解法：令 <span class="math inline">\(u=\dfrac{y}{x}\)</span> 则 <span class="math inline">\(y=x\cdot u\)</span>，两边对 <span class="math inline">\(x\)</span> 求导：<span class="math inline">\(\dfrac{dy}{dx}=u+x\cdot\dfrac{du}{dx}\)</span>。代入方程得
 <span class="math inline">\(u+x\cdot\dfrac{du}{dx}=g(u)\)</span>，分离变量可得
 <span class="math inline">\(\dfrac{u-g(u)}{du}=\dfrac{x}{dx}\)</span>。同时取倒数并积分：<span class="math inline">\(\displaystyle\int\dfrac1{u-g(u)}du=\int\dfrac{1}{x}dx\)</span>，最后把
 <span class="math inline">\(u=\dfrac{y}{x}\)</span>
 代回可得最终微分方程的解。</p>
-<h2 id="一阶线性微分方程">一阶线性微分方程</h2>
+<h3 id="一阶线性微分方程">一阶线性微分方程</h3>
 <ol type="1">
 <li><p>齐次方程</p>
 <p>标准形式：<span class="math inline">\(y^\prime+p(x)y=0\)</span></p>
@@ -982,8 +1075,8 @@ C\)</span>；化简可得 <span class="math inline">\(1+y^2=\dfrac{C}{1+x^2}\)</
 p(x)dx}\)</span></p></li>
 <li><p>非齐次方程</p>
 <p>标准形式：<span class="math inline">\(y^\prime+p(x)y=q(x)\)</span></p>
-<p>通解：<span class="math inline">\(y=\left(\int q(x)\cdot e^{\int
-p(x)dx}dx+C\right)e^{-\int p(x)dx}\)</span></p></li>
+<p>通解：<span class="math inline">\(y=\displaystyle\left(\int q(x)\cdot
+e^{\int p(x)dx}dx+C\right)e^{-\int p(x)dx}\)</span></p></li>
 </ol>
 <h2 id="全微分方程">全微分方程</h2>
 <blockquote>
@@ -1001,11 +1094,25 @@ x}=P,\quad\dfrac{\partial u}{\partial y}=Q\)</span></p></li>
 <li><p>利用第二类曲线积分的路径无关性</p></li>
 <li><p>凑微分法</p></li>
 </ol>
-<h2 id="常系数齐次线性微分方程">常系数齐次线性微分方程</h2>
-<p>求二阶常系数齐次线性微分方程通解的步骤： 1. 写出微分方程 <span class="math inline">\(y^{\prime\prime}+py^{\prime}+qy=0\)</span>
-的特征方程 <span class="math inline">\(r^2+pr+q=0\)</span> 2.
-求出特征方程的两个根 <span class="math inline">\(r_1\)</span>, <span class="math inline">\(r_2\)</span>； 3.
-根据特征根的不同情况，按下表写出方程的通解</p>
+<h2 id="高阶常系数线性微分方程">高阶常系数线性微分方程</h2>
+<p>二阶线性微分方程的一般形式： ||一般形式| |:--:|:--:| |齐次|<span class="math inline">\(y^{\prime\prime}+p(x)y^\prime+q(x)y=0\)</span>|
+|非齐次|<span class="math inline">\(y^{\prime\prime}+p(x)y^\prime+q(x)y=f(x)\)</span>|</p>
+<p>解的结构：</p>
+<ol type="1">
+<li>齐次的通解：设 <span class="math inline">\(y_1\)</span> 和 <span class="math inline">\(y_2\)</span> 是两个线性无关解，则 <span class="math display">\[y=c_1y_1+c_2y_2\]</span></li>
+<li>非齐次的通解 <span class="math inline">\(=\)</span> 齐次的通解 <span class="math inline">\(+\)</span> 非齐次的特解</li>
+<li>设 <span class="math inline">\(y_1\)</span> 是 <span class="math inline">\(y^{\prime\prime}+p(x)y^\prime+q(x)y=f_1(x)\)</span>
+的解；<span class="math inline">\(y_2\)</span> 是 <span class="math inline">\(y^{\prime\prime}+p(x)y^\prime+q(x)y=f_2(x)\)</span>
+的解，则 <span class="math inline">\(y_1+y_2\)</span> 是 <span class="math display">\[y^{\prime\prime}+p(x)y^\prime+q(x)y=f_1(x)+f_2(x)\]</span>
+的解。</li>
+</ol>
+<p>求二阶常系数齐次线性微分方程通解的步骤：</p>
+<ol type="1">
+<li><p>写出微分方程 <span class="math inline">\(y^{\prime\prime}+py^{\prime}+qy=0\)</span>
+的特征方程 <span class="math inline">\(r^2+pr+q=0\)</span></p></li>
+<li><p>求出特征方程的两个根 <span class="math inline">\(r_1\)</span>,
+<span class="math inline">\(r_2\)</span>；</p></li>
+<li><p>根据特征根的不同情况，按下表写出方程的通解</p>
 <table>
 
 <thead>
@@ -1029,7 +1136,33 @@ x}=P,\quad\dfrac{\partial u}{\partial y}=Q\)</span></p></li>
 x}\left(C_1\cos\beta x+C_2\sin\beta x\right)\)</span></td>
 </tr>
 </tbody>
-</table>
+</table></li>
+</ol>
+<p><span class="github-emoji"><span>📓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4d3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 自然常数 <span class="math inline">\(e\)</span> 的指数位上
+<span class="math inline">\(x\)</span> 的系数一直都是方程根的一部分</p>
+<p>求二阶常系数非齐次线性微分方程通解的步骤：</p>
+<ol type="1">
+<li><p>先令 <span class="math inline">\(f(x)=0\)</span>
+求出对应的齐次线性微分方程的通解；</p></li>
+<li><p>用待定系数法求非齐次线性微分方程的特解 <span class="math inline">\(y^\star (x)\)</span>：</p>
+<ul>
+<li>若 <span class="math inline">\(f(x)\)</span> 为多项式 <span class="math inline">\(P(n)\)</span>，则 <span class="math inline">\(y^\star=\begin{cases}R_n(x)&amp;\lambda\ne0\\
+x\cdot R_n(x)&amp;\lambda=0\,\text{为单根}\\ x^2\cdot
+R_n(x)&amp;\lambda=0\,\text{为二重根}\end{cases}\)</span></li>
+<li>若 <span class="math inline">\(f(x)=P_n(x)\cdot e^{\alpha
+x}\)</span>，则 <span class="math inline">\(y^\star=\begin{cases}R_n(x)\cdot e^{\alpha
+x}&amp;\lambda\ne\alpha\\ x\cdot R_n(x)\cdot e^{\alpha
+x}&amp;\lambda=\alpha\,\text{为单根}\\ x^2\cdot R_n(x)\cdot e^{\alpha
+x}&amp;\lambda=\alpha\,\text{为二重根}\end{cases}\)</span></li>
+<li>若 <span class="math inline">\(f(x)=e^{\alpha
+x}\left(P_n(x)\cdot\cos\beta x+Q_m(x)\cdot\sin\beta
+x\right)\)</span>，则 <span class="math inline">\(y^\star=\begin{cases}e^{\alpha
+x}\cdot\left(R_k(x)\cdot\cos\beta x+S_k(x)\cdot\sin\beta
+x\right)&amp;\lambda\ne\alpha\pm\beta i\\ x\cdot e^{\alpha
+x}\cdot\left(R_k(x)\cdot\cos\beta x+S_k(x)\cdot\sin\beta
+x\right)&amp;\lambda=\alpha\pm\beta i\end{cases}\)</span> 其中 <span class="math inline">\(k=\max{\left(m,\,n\right)}\)</span></li>
+</ul></li>
+</ol>
 
                 
               </div>
