@@ -30,7 +30,7 @@
   
   
   
-  <title>归档 - 杂货小铺</title>
+  <title>归档 | 杂货小铺</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -66,7 +66,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"devexzh.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"devexzh.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true,"scope":["home","tag","category","about","404"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"C++"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -173,7 +173,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="归档"></span>
+            <span id="subtitle">归档</span>
           
         </div>
 
@@ -201,13 +201,19 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 17 篇文章</p>
+  <p class="h4">共计 18 篇文章</p>
   <hr>
   
   
     
       
       <p class="h5">2023</p>
+    
+    <a href="/2023/Note_Of_Cplusplus_Template_Metaprogramming/" class="list-group-item list-group-item-action">
+      <time>07-17</time>
+      <div class="list-group-item-title">C++ 模板元编程笔记</div>
+    </a>
+  
     
     <a href="/2023/Note_Of_Fundamentals_Of_Electronics/" class="list-group-item list-group-item-action">
       <time>07-14</time>
@@ -262,56 +268,14 @@
       <div class="list-group-item-title">LaTeX 常用符号速查手册</div>
     </a>
   
-    
-    <a href="/2023/Note_Of_Electric_Circuits/" class="list-group-item list-group-item-action">
-      <time>02-19</time>
-      <div class="list-group-item-title">Electric Circuits</div>
-    </a>
-  
-    
-    <a href="/2023/IELTS_Learning/" class="list-group-item list-group-item-action">
-      <time>02-06</time>
-      <div class="list-group-item-title">IELTS Notes</div>
-    </a>
-  
-    
-    <a href="/2023/Note_Of_Physics/" class="list-group-item list-group-item-action">
-      <time>02-02</time>
-      <div class="list-group-item-title">物理笔记</div>
-    </a>
-  
-    
-    <a href="/2023/Note_Of_Advanced_Mathematics/" class="list-group-item list-group-item-action">
-      <time>01-31</time>
-      <div class="list-group-item-title">高等数学笔记</div>
-    </a>
-  
-    
-    <a href="/2023/Note_Of_Linear_Algebra/" class="list-group-item list-group-item-action">
-      <time>01-27</time>
-      <div class="list-group-item-title">线性代数笔记</div>
-    </a>
-  
-    
-    <a href="/2023/Note_Of_Introduction_To_Algorithms/" class="list-group-item list-group-item-action">
-      <time>01-27</time>
-      <div class="list-group-item-title">《算法导论》笔记</div>
-    </a>
-  
-    
-    <a href="/2023/Practical_Codes_In_Different_Languages/" class="list-group-item list-group-item-action">
-      <time>01-16</time>
-      <div class="list-group-item-title">不同语言中常用的操作</div>
-    </a>
-  
-    
-    <a href="/2023/Go_Manuscript/" class="list-group-item list-group-item-action">
-      <time>01-15</time>
-      <div class="list-group-item-title">Go 学习笔记</div>
-    </a>
-  
 </div>
 
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/#board">2</a><a class="extend next" rel="next" href="/archives/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
 
 
 
@@ -390,21 +354,6 @@
 <script  src="/js/plugins.js" ></script>
 
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
 
 
 
@@ -418,10 +367,6 @@
   <script  src="/js/local-search.js" ></script>
 
 
-
-
-  
-<script src="/js/live2d.js"></script>
 
 
 

@@ -18,24 +18,25 @@
   <meta name="author" content="Ryker Zhu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Preface The post is the note based on the textbook Fundamentals of Physics written by David Halliday, Robert Resnick and Jearl Walker (ISBN: 978-1-118-23072-5) Some particular symbols are introduced t">
+    <meta name="description" content="PREFACE   Reference Book:  C++ Templates: The Complete Guide 2nd Edition      Copyright: WRITTEN BY RYKER ZHU in Shanghai under CC BY-NC-SA  Tips: You can click on the table of contents on the right">
 <meta property="og:type" content="article">
-<meta property="og:title" content="物理笔记">
-<meta property="og:url" content="https://devexzh.github.io/2023/Note_Of_Physics/">
+<meta property="og:title" content="C++ 模板元编程笔记">
+<meta property="og:url" content="https://devexzh.github.io/2023/Note_Of_Cplusplus_Template_Metaprogramming/">
 <meta property="og:site_name" content="杂货小铺">
-<meta property="og:description" content="Preface The post is the note based on the textbook Fundamentals of Physics written by David Halliday, Robert Resnick and Jearl Walker (ISBN: 978-1-118-23072-5) Some particular symbols are introduced t">
+<meta property="og:description" content="PREFACE   Reference Book:  C++ Templates: The Complete Guide 2nd Edition      Copyright: WRITTEN BY RYKER ZHU in Shanghai under CC BY-NC-SA  Tips: You can click on the table of contents on the right">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://devexzh.github.io/img/physics-wallpaper.jpg">
-<meta property="article:published_time" content="2023-02-02T10:04:19.311Z">
-<meta property="article:modified_time" content="2023-02-19T04:06:37.316Z">
+<meta property="og:image" content="https://devexzh.github.io/img/baking_utensils.jpg">
+<meta property="article:published_time" content="2023-07-17T11:49:34.633Z">
+<meta property="article:modified_time" content="2023-07-17T11:49:34.662Z">
 <meta property="article:author" content="Ryker Zhu">
-<meta property="article:tag" content="物理">
+<meta property="article:tag" content="程序设计">
+<meta property="article:tag" content="元编程">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://devexzh.github.io/img/physics-wallpaper.jpg">
+<meta name="twitter:image" content="https://devexzh.github.io/img/baking_utensils.jpg">
   
   
   
-  <title>物理笔记 | 杂货小铺</title>
+  <title>C++ 模板元编程笔记 | 杂货小铺</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -178,13 +179,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/physics-wallpaper.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/baking_utensils.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">物理笔记</span>
+            <span id="subtitle">C++ 模板元编程笔记</span>
           
         </div>
 
@@ -195,8 +196,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-02 18:04" pubdate>
-          2023年2月2日 晚上
+        <time datetime="2023-07-17 19:49" pubdate>
+          2023年7月17日 晚上
         </time>
       </span>
     
@@ -207,7 +208,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.8k 字
+          188 字
         
       </span>
     
@@ -218,7 +219,7 @@
         
         
         
-          9 分钟
+          1 分钟
         
       </span>
     
@@ -256,253 +257,29 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">物理笔记</h1>
+            <h1 style="display: none">C++ 模板元编程笔记</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="preface">Preface</h1>
-<p>The post is the note based on the textbook <em>Fundamentals of
-Physics</em> written by David Halliday, Robert Resnick and Jearl Walker
-(ISBN: 978-1-118-23072-5)</p>
-<p>Some particular symbols are introduced to describe some properties,
-as listed below.</p>
-<p><strong>Symbol Table</strong></p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Symbol</th>
-<th style="text-align: center;">Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="github-emoji"><span>🎒</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f392.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></td>
-<td style="text-align: center;">Already learned in middle school</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="github-emoji"><span>⚠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></td>
-<td style="text-align: center;">Key point of some contents</td>
-</tr>
-</tbody>
-</table>
-<p>The post is done individually by <em>Ryker Zhu</em> from <em>Nanjing
-University of Information Science and Technology</em>, published under
-the license <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC
-BY-NC-SA</a>.
+                <details>
+<summary>
+PREFACE
+</summary>
+<p><br></p>
+<p><strong>Reference Book</strong>:</p>
+<ul>
+<li><em>C++ Templates: The Complete Guide 2nd Edition</em></li>
+</ul>
+<div style="display: flex; justify-content: center;">
+<p><img src="https://m.media-amazon.com/images/I/51Rmsy9wSdL.jpg" srcset="/img/loading.gif" lazyload style="width: 30%;"></p>
+</div>
+<p><br></p>
+<p><strong>Copyright</strong>: WRITTEN BY RYKER ZHU in Shanghai under <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a>
 <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" srcset="/img/loading.gif" lazyload></a></p>
-<h1 id="measurement">Measurement</h1>
-<table>
-<caption>school_satchel: <strong>International System of Units</strong>
-(Français: Système international d'unités) (Abbr. <strong>SI</strong>),
-i.e. <strong>metric system</strong>.</caption>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Symbol</th>
-<th style="text-align: center;">Name</th>
-<th style="text-align: center;">Quantity</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(s\)</span></td>
-<td style="text-align: center;">second</td>
-<td style="text-align: center;">time</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(m\)</span></td>
-<td style="text-align: center;">meter</td>
-<td style="text-align: center;">length</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(kg\)</span></td>
-<td style="text-align: center;">kilogram</td>
-<td style="text-align: center;">mass</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
-<td style="text-align: center;">ampere</td>
-<td style="text-align: center;">electric current</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(K\)</span></td>
-<td style="text-align: center;">kelvin</td>
-<td style="text-align: center;">thermodynamic temperature</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(mol\)</span></td>
-<td style="text-align: center;">mole</td>
-<td style="text-align: center;">amount of substance</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(cd\)</span></td>
-<td style="text-align: center;">candela</td>
-<td style="text-align: center;">luminous intensity</td>
-</tr>
-</tbody>
-</table>
-<h1 id="motion">Motion</h1>
-<h2 id="vector-scalar">Vector &amp; Scalar</h2>
-<pre><code class=" mermaid">flowchart LR
-  A(Physical Quantities) --- B(Vector Quantities) &amp; C(Scalars)
-  B --- D(Magnitude) &amp; E(Direction)
-</code></pre>
-<p><span class="github-emoji"><span>🎒</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f392.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> <strong><em>Component</em></strong>: Projection of
-the vector on an axis.</p>
-<ul>
-<li>Vector component : <span class="math inline">\(a_x\hat{i},\,a_y\hat{j}\)</span></li>
-<li>(Scalar) component : <span class="math inline">\(a_x,\,a_y\)</span></li>
-</ul>
-<p><span class="github-emoji"><span>🎒</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f392.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> <strong><em>Scalar Product</em></strong> or
-<strong><em>Dot Product</em></strong>: spoken as "a dot b" <span class="math display">\[\vec{a}\cdot\vec{b}=a\cdot b \cos\phi\]</span>
-<span class="math inline">\(a\)</span> - magnitude of the vector <span class="math inline">\(\vec{a}\)</span>;<br>
-<span class="math inline">\(\phi\)</span> - angle between <span class="math inline">\(\vec{a}\)</span> and <span class="math inline">\(\vec{b}\)</span>.</p>
-<p><strong><em>Vector Product</em></strong> or <strong><em>Cross
-Product</em></strong>: spoken as "a cross b"</p>
-<ul>
-<li><p>Magnitude</p>
-<p><span class="math display">\[c=a\cdot b \sin\phi\]</span> <span class="math inline">\(c\)</span> - magnitude of the vector <span class="math inline">\(\vec{c}\)</span>;<br>
-<span class="math inline">\(\phi\)</span> - <em>smaller</em> of the two
-angles between <span class="math inline">\(\vec{a}\)</span> and <span class="math inline">\(\vec{b}\)</span>.</p></li>
-<li><p>Direction</p>
-<p>Perpendicular to the plane containing <span class="math inline">\(\vec{a}\)</span> and <span class="math inline">\(\vec{b}\)</span>.<br>
-Determine with <strong>right-hand rule</strong>, right-hand fingers swap
-<span class="math inline">\(\vec{a}\)</span> into <span class="math inline">\(\vec{b}\)</span>.</p></li>
-</ul>
-<h2 id="position-and-displacement">Position and Displacement</h2>
-<p><span class="github-emoji"><span>🎒</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f392.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> <strong><em>Kinematics</em></strong>:
-(<em>/,kɪnɪ'mætɪks/</em> or <em>/kaɪnə'mætɪks]/</em>) Classification and
-comparison of motions.</p>
-<p><span class="github-emoji"><span>🎒</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f392.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> <strong><em>Particle</em></strong>: Point-like
-object</p>
-<h3 id="projectile-motion">Projectile Motion</h3>
-<blockquote>
-<p>A particle moves in a vertical plane with some initial velocity, but
-its acceleration is always the free-fall acceleration, which is
-downward.</p>
-<p>Such a particle is called <strong><em>projectile</em></strong>
-<em>/prəˈdʒektaɪl/</em> and its motion is called <strong><em>projectile
-motion</em></strong>.</p>
-</blockquote>
-<p>Horizontal Motion: <span class="math display">\[x-x_0=v_{0x}t=\left(v_0\cos\theta_0\right)t\]</span>
-Vertical Motion: <span class="math display">\[y-y_0=v_{0y}-\frac{1}{2}gt^2\]</span></p>
-<p>The Equation of the Path (<strong><em>Trajectory</em></strong>
-<em>/trəˈdʒektəri/</em>): <span class="math display">\[y=\left(\tan\theta_0\right)x-\frac{g}{2\left(v_0\cos\theta_0\right)^2}x^2\]</span>
-The equation is also the one of <strong><em>parabola</em></strong>
-<em>/pəˈræbələ/</em> so the path is parabolic.</p>
-<h1 id="force">Force</h1>
-<blockquote>
-<p><strong><em>Newtonian Mechanics</em></strong>: The relation between a
-force and the acceleration it causes</p>
-</blockquote>
-<h2 id="school_satchel-newtons-three-primary-laws-of-motion"><span class="github-emoji"><span>🎒</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f392.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>
-Newton's three primary laws of motion</h2>
-<p><strong><em>Net Force</em></strong> or <strong><em>Resultant
-Force</em></strong>: Adding all forces acted on the same body</p>
-<p><strong><em>Principle of superposition for forces</em></strong>: A
-single force that has the same magnitude and direction as the calculated
-net force would then have the same effect as all the individual
-forces.</p>
-<p><span class="github-emoji"><span>⚠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> Newton's laws is not always true unless in
-<strong><em>inertial</em></strong> <em>/ɪˈnɜːʃl/</em>
-<strong><em>reference frames</em></strong>.</p>
-<h3 id="newtons-first-law">Newton’s First Law</h3>
-<blockquote>
-<p>If no net force acts on a body (<span class="math inline">\(\overrightarrow{F_\mathrm{net}}=0\)</span>), the
-body’s velocity cannot change; that is, the body cannot accelerate.</p>
-</blockquote>
-<h3 id="newtons-second-law">Newton’s Second Law</h3>
-<blockquote>
-<p>The net force on a body is equal to the product of the body’s mass
-and its acceleration.</p>
-<p><span class="math display">\[\overrightarrow{F_\mathrm{net}}=m\vec{a}\]</span></p>
-</blockquote>
-<p><span class="github-emoji"><span>⚠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> The acceleration component along a given axis is caused
-only by the sum of the force components along that same axis, and not by
-force components along any other axis.</p>
-<p><strong><em>Forces in Equilibrium</em></strong>: Any forces on the
-body balance one another, and both the forces and the body are said to
-be in <strong><em>equilibrium</em></strong> (<em>/ˌiːkwɪˈlɪbriəm/</em>
-or <em>/ˌekwɪˈlɪbriəm/</em>).</p>
-<h3 id="newtons-third-law">Newton’s Third Law</h3>
-<blockquote>
-<p>When two bodies interact, the forces on the bodies from each other
-are always equal in magnitude and opposite in direction.</p>
-</blockquote>
-<h3 id="particular-forces">Particular Forces</h3>
-<h4 id="school_satchel-normal-force"><span class="github-emoji"><span>🎒</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f392.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> <strong><em>Normal
-Force</em></strong></h4>
-<p>When a body presses against a surface, the surface (even a seemingly
-rigid one) deforms and pushes on the body with a normal force <span class="math inline">\(\overrightarrow{F_N}\)</span> that is
-perpendicular to the surface.</p>
-<h4 id="school_satchel-frictional-force"><span class="github-emoji"><span>🎒</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f392.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>
-<strong><em>Frictional force</em></strong></h4>
-<p>The force on a body when the body slides or attempts to slide along a
-surface. The force is always parallel to the surface and directed so as
-to oppose the sliding. On a frictionless surface, the frictional force
-is negligible.</p>
-<ul>
-<li>If the body does not slide, the frictional force <span class="math inline">\(f_s\)</span> is a <strong><em>static frictional
-force</em></strong>.
-<ul>
-<li>The magnitude of <span class="math inline">\(f_s\)</span> has a
-maximum value <span class="math inline">\(f_{s,max}\)</span> given by
-<span class="math display">\[f_{s,max}=\mu_sF_N\]</span>
-<ul>
-<li><span class="math inline">\(\mu_s\)</span> - <strong><em>coefficient
-of static friction</em></strong></li>
-<li><span class="math inline">\(F_N\)</span> - magnitude of the normal
-force.</li>
-</ul></li>
-</ul></li>
-<li>If there is sliding, the frictional force is a <strong><em>kinetic
-frictional force</em></strong>.
-<ul>
-<li>The magnitude of the frictional force rapidly decreases to a
-constant value <span class="math inline">\(f_k\)</span> given by <span class="math display">\[f_k=\mu_kF_N\]</span>
-<ul>
-<li><span class="math inline">\(\mu_k\)</span> - <strong><em>coefficient
-of kinetic friction</em></strong></li>
-</ul></li>
-</ul></li>
-</ul>
-<h4 id="drag-force"><strong><em>Drag Force</em></strong></h4>
-<p>When there is relative motion between air (or some other fluid) and a
-body, the body experiences a drag force <span class="math inline">\(\vec{D}\)</span> that opposes the relative motion
-and points in the direction in which the fluid flows relative to the
-body.</p>
-<p>The magnitude of D: <span class="math display">\[D=\frac{1}{2}C\rho
-Av^2\]</span> - <span class="math inline">\(C\)</span> - an
-experimentally determined drag coefficient - <span class="math inline">\(\rho\)</span> - the fluid density (mass per unit
-volume) - <span class="math inline">\(A\)</span> - the effective
-cross-sectional area of the body (the area of a cross section taken
-perpendicular to the relative velocity <span class="math inline">\(\vec{v}\)</span>).</p>
-<h1 id="energy-work">Energy &amp; Work</h1>
-<h1 id="center-of-mass-linear-momentum">Center of Mass &amp; Linear
-Momentum</h1>
-<h1 id="rotation-angular-momentum">Rotation &amp; Angular Momentum</h1>
-<h1 id="gravitation">Gravitation</h1>
-<h1 id="oscillations">Oscillations</h1>
-<h1 id="waves">Waves</h1>
-<h1 id="the-kinetic-theory-of-gases">The Kinetic Theory of Gases</h1>
-<h1 id="the-law-of-thermodynamics">The Law of Thermodynamics</h1>
-<h1 id="electricity">Electricity</h1>
-<h1 id="gausss-law">Gauss's Law</h1>
-<h1 id="dc-circuits">DC Circuits</h1>
-<h1 id="magnetic-fields">Magnetic Fields</h1>
-<h1 id="magnetic-fields-due-to-currents">Magnetic Fields Due to
-Currents</h1>
-<h1 id="induction-inductance">Induction &amp; Inductance</h1>
-<h1 id="electromagnetic-oscillations-alternating-current">Electromagnetic
-Oscillations &amp; Alternating Current</h1>
-<h1 id="maxwells-equations-magnetism-of-matter">Maxwell's Equations;
-Magnetism of Matter</h1>
-<h1 id="electromagnetic-waves">Electromagnetic Waves</h1>
-<h1 id="optics">Optics</h1>
-<h1 id="relativity">Relativity</h1>
-<h1 id="quantum-physics">Quantum Physics</h1>
-<h1 id="conduction-of-electricity-in-solids">Conduction of Electricity
-in Solids</h1>
+<strong>Tips</strong>: You can click on the table of contents on the
+right sidebar of the web page to navigate.
+</details>
 
                 
               </div>
@@ -536,7 +313,9 @@ in Solids</h1>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%89%A9%E7%90%86/">#物理</a>
+        <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">#程序设计</a>
+      
+        <a href="/tags/%E5%85%83%E7%BC%96%E7%A8%8B/">#元编程</a>
       
     </div>
   
@@ -548,8 +327,8 @@ in Solids</h1>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>物理笔记</div>
-      <div>https://devexzh.github.io/2023/Note_Of_Physics/</div>
+      <div>C++ 模板元编程笔记</div>
+      <div>https://devexzh.github.io/2023/Note_Of_Cplusplus_Template_Metaprogramming/</div>
     </div>
     <div class="license-meta">
       
@@ -561,7 +340,7 @@ in Solids</h1>
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月2日</div>
+          <div>2023年7月17日</div>
         </div>
       
       
@@ -605,18 +384,12 @@ in Solids</h1>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/IELTS_Learning/" title="IELTS Notes">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">IELTS Notes</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/Note_Of_Advanced_Mathematics/" title="高等数学笔记">
-                        <span class="hidden-mobile">高等数学笔记</span>
+                      <a href="/2023/Note_Of_Fundamentals_Of_Electronics/" title="电子技术基础笔记">
+                        <span class="hidden-mobile">电子技术基础笔记</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
