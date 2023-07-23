@@ -1397,12 +1397,11 @@ figure.highlight td.code > pre {
 .markdown-body p > a > img,
 .markdown-body figure > img,
 .markdown-body figure > a > img {
-  max-width: 90%;
+  max-width: 100%;
   margin: 1.5rem auto;
   display: block;
-  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
   border-radius: 4px;
-  background-color: transparent;
+  background-color: #fff;
 }
 .markdown-body blockquote {
   color: var(--sec-text-color);

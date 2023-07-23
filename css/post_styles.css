@@ -10,11 +10,3 @@ figure.highlight table {
 	text-align: center;
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
-
-svg {
-	background: #fff;
-}
-
-.mermaid &gt; svg {
-	background-color: #f6f8fa;
-}
