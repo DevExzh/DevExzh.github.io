@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'ShipporiMincho';
+    src: local(''), local('ShipporiMincho-OTF-Regular'),
+        url('fonts/ShipporiMincho-OTF-Regular.woff2') format('woff2'),
+        url('fonts/ShipporiMincho-OTF-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
