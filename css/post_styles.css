@@ -10,3 +10,6 @@ figure.highlight table {
 	text-align: center;
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
+
+.md-centering-table {
+	margin: 0px auto;
