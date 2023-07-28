@@ -12,4 +12,5 @@ figure.highlight table {
 }
 
 .md-centering-table {
-	margin: 0px auto;
+	text-align: center;
+}
