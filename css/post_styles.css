@@ -14,3 +14,27 @@ figure.highlight table {
 .md-centering-table {
 	text-align: center;
 }
+
+.bg-container {
+	display: inline;
+	position: fixed;
+	left: -180px;
+	bottom: -180px;
+	width: 100%;
+	z-index: -9999999;
+}
+
+@keyframes rota {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+.bg-img {
+	display: inline;
+	width: 411.6865px;
+	height: 402.758px;
+	background-image: url(/img/BlackMagicCircle.svg);
+	background-size: contain;
+	background-position: center;
+	animation: rota 60s linear infinite;
+}

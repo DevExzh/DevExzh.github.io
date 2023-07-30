@@ -27,7 +27,7 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://devexzh.github.io/img/japan.jpg">
 <meta property="article:published_time" content="2023-07-24T06:40:00.000Z">
-<meta property="article:modified_time" content="2023-07-26T15:24:31.035Z">
+<meta property="article:modified_time" content="2023-07-29T05:38:31.023Z">
 <meta property="article:author" content="Ryker Zhu">
 <meta property="article:tag" content="语言学习">
 <meta property="article:tag" content="日语">
@@ -210,7 +210,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 単語
+          1.2k 単語
         
       </span>
     
@@ -263,7 +263,7 @@
             
             
               <div class="markdown-body">
-                
+                <div class="bg-container"><div class="bg-img"></div></div>
                 <h1 id="五十音図">五十音図</h1>
 <noscript>
 请允许运行 JavaScript 以启用点读功能
@@ -287,9 +287,7 @@
 let flag_enable_speech = false;
 
 function findName(e) {
-    var classes = e.className.split(" ");
-    for(let i = 0; i < classes.length; i++) {
-        var c = classes[i];
+    for(let c of e.className.split(" ")) {
         if(c.startsWith("speak-kana-")) {
             return c.replace("speak-kana-", "");
         }
@@ -299,7 +297,7 @@ function findName(e) {
 
 function speakOut(e) {
     if(!flag_enable_speech) return;
-    var n = findName(e);
+    const n = findName(e);
     if(n == null) return;
     new Audio("/audio/0c2683ac2763bccf036093d0a0c4deba/" + n + ".wav").play();
 }
@@ -1248,6 +1246,10 @@ function toggleJapaneseKanaSpeech(e) {
   <script  src="/js/local-search.js" ></script>
 
 
+
+
+  
+<script src="/js/post_styles.js"></script>
 
 
 
