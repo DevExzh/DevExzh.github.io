@@ -2,6 +2,11 @@ figure.highlight table {
 	overflow: auto;
 }
 
+h1, h2, h3, h4, h5, h6, p, body, button, input, select, textarea {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 .markdown-body table {
 	overflow: visible;
 }
@@ -24,9 +29,14 @@ figure.highlight table {
 	z-index: -9999999;
 }
 
+@-webkit-keyframes rota {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+	to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+}
+
 @keyframes rota {
-	from {transform: rotate(0deg);}
-	to {transform: rotate(360deg);}
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+	to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
 }
 
 .bg-img {
@@ -36,5 +46,6 @@ figure.highlight table {
 	background-image: url(/img/BlackMagicCircle.svg);
 	background-size: contain;
 	background-position: center;
-	animation: rota 60s linear infinite;
+	-webkit-animation: rota 60s linear infinite;
+	        animation: rota 60s linear infinite;
 }
