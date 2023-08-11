@@ -45,41 +45,6 @@
   </entry>
   
   <entry>
-    <title>深度学习笔记</title>
-    <link href="https://devexzh.github.io/2023/Note_Of_Deep_Learning/"/>
-    <id>https://devexzh.github.io/2023/Note_Of_Deep_Learning/</id>
-    <published>2023-08-04T09:20:10.000Z</published>
-    <updated>2023-08-04T10:32:06.689Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>前言</strong></p><p>本文是《笔记》系列的新篇，旨在用通俗的文字记录深度学习的学习历程。本文受到<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CreativeCommons BY-NC-SA 4.0</a>协议的保护，禁止一切商业化使用；文中出现的所有代码均以 <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache LicenseVersion 2.0</a>的形式授权，任何转载与复制都表示您接受该款协议的约束。</p><p><strong>外部链接</strong> |平台|PyTorch|NumPy|TensorFlow||:---:|:---:|:---:|:---:| |链接|<a href="https://pytorch.org/get-started/locally/">Get Started</a>|<a href="https://numpy.org/doc/stable/">Documentation</a>|<a href="https://www.tensorflow.org/install">Installation</a>|</p><p><strong>参考资料</strong></p><ul><li><a href="https://d2l.ai/">Dive into Deep Learning</a></li><li><a href="https://www.amazon.co.jp/%E3%83%87%E3%82%A3%E3%83%BC%E3%83%97%E3%83%A9%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%81%8C%E3%82%8F%E3%81%8B%E3%82%8B%E6%95%B0%E5%AD%A6%E5%85%A5%E9%96%80-%E6%B6%8C%E4%BA%95-%E8%89%AF%E5%B9%B8/dp/477418814X">ディープラーニングがわかる数学入門</a></li></ul><hr>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;本文是《笔记》系列的新篇，旨在用通俗的文字记录深度学习的学习历程。本文受到
-&lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;Creative
-Co</summary>
-      
-    
-    
-    
-    <category term="学习笔记" scheme="https://devexzh.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="机器学习" scheme="https://devexzh.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="深度学习" scheme="https://devexzh.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="人工智能" scheme="https://devexzh.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    <category term="PyTorch" scheme="https://devexzh.github.io/tags/PyTorch/"/>
-    
-    <category term="Python" scheme="https://devexzh.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>日本語学習ノート</title>
     <link href="https://devexzh.github.io/2023/Note_Of_Japanese_Learning/"/>
     <id>https://devexzh.github.io/2023/Note_Of_Japanese_Learning/</id>
@@ -118,7 +83,7 @@ Co</summary>
     <published>2023-07-19T13:00:00.000Z</published>
     <updated>2023-07-24T06:30:03.064Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="视频推荐">视频推荐</h1><table><thead><tr class="header"><th style="text-align: center;">香辛料</th><th style="text-align: center;">调料</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;"><style>.bbplayer{width: 100%; max-width: 850px; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-wBqIHizdtRtkpVbL" src="https://player.bilibili.com/player.html?bvid=BV19h411N76V&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-wBqIHizdtRtkpVbL").style.height=document.getElementById("mmedia-wBqIHizdtRtkpVbL").scrollWidth*0.76+"px";    window.onresize = function(){      document.getElementById("mmedia-wBqIHizdtRtkpVbL").style.height=document.getElementById("mmedia-wBqIHizdtRtkpVbL").scrollWidth*0.76+"px";    }; </script></td><td style="text-align: center;"><style>.bbplayer{width: 100%; max-width: 850px; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-tmatHLFBxckUfdFW" src="https://player.bilibili.com/player.html?bvid=BV1DP41197Dj&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-tmatHLFBxckUfdFW").style.height=document.getElementById("mmedia-tmatHLFBxckUfdFW").scrollWidth*0.76+"px";    window.onresize = function(){      document.getElementById("mmedia-tmatHLFBxckUfdFW").style.height=document.getElementById("mmedia-tmatHLFBxckUfdFW").scrollWidth*0.76+"px";    }; </script></td></tr></tbody></table><h1 id="分类">分类</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="视频推荐">视频推荐</h1><table><thead><tr class="header"><th style="text-align: center;">香辛料</th><th style="text-align: center;">调料</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;"><style>.bbplayer{width: 100%; max-width: 850px; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-cMdbHIJJQVnSibjh" src="https://player.bilibili.com/player.html?bvid=BV19h411N76V&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-cMdbHIJJQVnSibjh").style.height=document.getElementById("mmedia-cMdbHIJJQVnSibjh").scrollWidth*0.76+"px";    window.onresize = function(){      document.getElementById("mmedia-cMdbHIJJQVnSibjh").style.height=document.getElementById("mmedia-cMdbHIJJQVnSibjh").scrollWidth*0.76+"px";    }; </script></td><td style="text-align: center;"><style>.bbplayer{width: 100%; max-width: 850px; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-gARSDDCwSkyyKieY" src="https://player.bilibili.com/player.html?bvid=BV1DP41197Dj&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-gARSDDCwSkyyKieY").style.height=document.getElementById("mmedia-gARSDDCwSkyyKieY").scrollWidth*0.76+"px";    window.onresize = function(){      document.getElementById("mmedia-gARSDDCwSkyyKieY").style.height=document.getElementById("mmedia-gARSDDCwSkyyKieY").scrollWidth*0.76+"px";    }; </script></td></tr></tbody></table><h1 id="分类">分类</h1>]]></content>
     
     
       
@@ -583,6 +548,34 @@ Physics&lt;/em&gt; written by David Halliday, Robe</summary>
     
     
     <category term="算法" scheme="https://devexzh.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不同语言中常用的操作</title>
+    <link href="https://devexzh.github.io/2023/Practical_Codes_In_Different_Languages/"/>
+    <id>https://devexzh.github.io/2023/Practical_Codes_In_Different_Languages/</id>
+    <published>2023-01-16T05:40:00.000Z</published>
+    <updated>2023-07-24T06:37:42.905Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="不同语言中常用的操作">不同语言中常用的操作</h1><p>简要记录一下，以防某一天用时才想着四处寻找 ## 遍历文件 C++标准库（C++17 及以上） </p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;filesystem&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{<br>    <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br>    <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::filesystem;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span>&amp; i : <span class="hljs-built_in">directory_iterator</span>(<span class="hljs-string">"C:\\example"</span>)) {<br>        cout &lt;&lt; i.<span class="hljs-built_in">path</span>().<span class="hljs-built_in">string</span>() &lt;&lt; endl;<br>    }<br>}<br></code></pre></td></tr></tbody></table></figure><p></p><p>Python 有两种标准库中支持的遍历方法： 1. <code>os.walk()</code>函数（递归遍历所有子孙目录） 该函数返回一个三元元组<code>(dirpath, dirnames, filenames)</code>，分别表示根目录、路径下所有的子目录、路径下所有的文件。</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:<br>  <span class="hljs-keyword">for</span> dirpath, dirnames, filenames <span class="hljs-keyword">in</span> os.walk(<span class="hljs-string">'C:\\example'</span>):<br>     <span class="hljs-keyword">for</span> filepath <span class="hljs-keyword">in</span> filenames:<br>         <span class="hljs-built_in">print</span>(os.path.join(dirpath, filepath))<br></code></pre></td></tr></tbody></table></figure> 2. <code>os.listdir()</code> 函数 不同于<code>os.walk()</code>，该函数仅遍历指定路径下所有的文件以及文件夹，但不会遍历子孙文件夹。<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:<br>  <span class="hljs-keyword">for</span> entry <span class="hljs-keyword">in</span> os.listdir(<span class="hljs-string">'C:\\example'</span>):<br>     path: <span class="hljs-built_in">str</span> = os.path.join(<span class="hljs-string">'C:\\example'</span>, entry)<br>     <span class="hljs-keyword">if</span> os.path.isfile(path):<br>         <span class="hljs-built_in">print</span>(path)<br></code></pre></td></tr></tbody></table></figure><p></p><p>Go 标准库同样提供了类似于 Python 中的两种方法： 1.<code>filepath.Walk</code> - 类似于 Python 中的 <code>os.walk()</code>函数，递归遍历所有子孙目录。 </p><figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> (<br>   <span class="hljs-string">"fmt"</span><br>   <span class="hljs-string">"os"</span><br>   <span class="hljs-string">"path/filepath"</span><br>)<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {<br>    <span class="hljs-keyword">var</span> files = <span class="hljs-built_in">make</span>([]<span class="hljs-type">string</span>, <span class="hljs-number">16</span>)<br>    err := filepath.Walk(<span class="hljs-string">"C:\\example"</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(path <span class="hljs-type">string</span>, info os.FileInfo, err <span class="hljs-type">error</span>)</span></span> <span class="hljs-type">error</span> {<br>        <span class="hljs-keyword">if</span> !info.IsDir() { <span class="hljs-comment">// Not a directory</span><br>            files = <span class="hljs-built_in">append</span>(files, path)<br>        }<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span><br>    })<br>    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {<br>        <span class="hljs-built_in">panic</span>(err)<br>    }<br>    <span class="hljs-keyword">for</span> _, file := <span class="hljs-keyword">range</span> files {<br>        fmt.Println(file)<br>    }<br>}<br></code></pre></td></tr></tbody></table></figure> 2. <code>File.ReadDir</code>- 类似于 Python 中的<code>os.listdir()</code>，只遍历目录下的文件或文件夹，不包含子孙目录。<figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><span class="hljs-keyword">import</span> (<br> <span class="hljs-string">"fmt"</span><br> <span class="hljs-string">"os"</span><br> <span class="hljs-string">"path/filepath"</span><br>)<br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {<br> cur_path := <span class="hljs-string">"C:\\example"</span><br> f, _ := os.Open(cur_path)<br> files, _ := f.ReadDir(<span class="hljs-number">-1</span>)<br> err := f.Close()<br> <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {<br> <span class="hljs-built_in">panic</span>(err)<br> }<br> <span class="hljs-keyword">for</span> _, file := <span class="hljs-keyword">range</span> files {<br>  <span class="hljs-keyword">if</span> !file.IsDir() {<br>   fmt.Println(filepath.Join(cur_path, file.Name()))<br>  }<br> }<br>}<br></code></pre></td></tr></tbody></table></figure><p></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;不同语言中常用的操作&quot;&gt;不同语言中常用的操作&lt;/h1&gt;
+&lt;p&gt;简要记录一下，以防某一天用时才想着四处寻找 ## 遍历文件 C++
+标准库（C++17 及以上） &lt;/p&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;</summary>
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://devexzh.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="开发" scheme="https://devexzh.github.io/tags/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="编程语言" scheme="https://devexzh.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   

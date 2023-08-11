@@ -29,15 +29,6 @@
   </url>
   
   <url>
-    <loc>https://devexzh.github.io/2023/Note_Of_Deep_Learning/</loc>
-    
-    <lastmod>2023-08-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://devexzh.github.io/2023/Note_Of_Japanese_Learning/</loc>
     
     <lastmod>2023-08-01</lastmod>
@@ -260,20 +251,6 @@
   </url>
   
   <url>
-    <loc>https://devexzh.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
-    <lastmod>2023-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://devexzh.github.io/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2023-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://devexzh.github.io/tags/%E5%8E%A8%E8%89%BA/</loc>
     <lastmod>2023-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -295,7 +272,14 @@
   </url>
   
   <url>
-    <loc>https://devexzh.github.io/tags/%E5%85%83%E7%BC%96%E7%A8%8B/</loc>
+    <loc>https://devexzh.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
+    <lastmod>2023-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://devexzh.github.io/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</loc>
     <lastmod>2023-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -309,35 +293,14 @@
   </url>
   
   <url>
-    <loc>https://devexzh.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://devexzh.github.io/tags/%E5%85%83%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2023-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://devexzh.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2023-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://devexzh.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
-    <lastmod>2023-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://devexzh.github.io/tags/PyTorch/</loc>
-    <lastmod>2023-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://devexzh.github.io/tags/Python/</loc>
+    <loc>https://devexzh.github.io/tags/%E7%94%B5%E8%B7%AF/</loc>
     <lastmod>2023-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -358,20 +321,6 @@
   </url>
   
   <url>
-    <loc>https://devexzh.github.io/tags/%E7%89%A9%E7%90%86/</loc>
-    <lastmod>2023-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://devexzh.github.io/tags/%E7%94%B5%E8%B7%AF/</loc>
-    <lastmod>2023-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://devexzh.github.io/tags/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2023-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -380,6 +329,13 @@
   
   <url>
     <loc>https://devexzh.github.io/tags/%E6%97%A5%E8%AF%AD/</loc>
+    <lastmod>2023-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://devexzh.github.io/tags/%E7%89%A9%E7%90%86/</loc>
     <lastmod>2023-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

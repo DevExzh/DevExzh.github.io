@@ -31,39 +31,6 @@
   
   
   <entry>
-    <title>深度学习笔记</title>
-    <link href="/2023/Note_Of_Deep_Learning/"/>
-    <url>/2023/Note_Of_Deep_Learning/</url>
-    
-    <content type="html"><![CDATA[<p><strong>前言</strong></p><p>本文是《笔记》系列的新篇，旨在用通俗的文字记录深度学习的学习历程。本文受到<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CreativeCommons BY-NC-SA 4.0</a>协议的保护，禁止一切商业化使用；文中出现的所有代码均以 <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache LicenseVersion 2.0</a>的形式授权，任何转载与复制都表示您接受该款协议的约束。</p><p><strong>外部链接</strong> |平台|PyTorch|NumPy|TensorFlow||:---:|:---:|:---:|:---:| |链接|<a href="https://pytorch.org/get-started/locally/">Get Started</a>|<a href="https://numpy.org/doc/stable/">Documentation</a>|<a href="https://www.tensorflow.org/install">Installation</a>|</p><p><strong>参考资料</strong></p><ul><li><a href="https://d2l.ai/">Dive into Deep Learning</a></li><li><a href="https://www.amazon.co.jp/%E3%83%87%E3%82%A3%E3%83%BC%E3%83%97%E3%83%A9%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%81%8C%E3%82%8F%E3%81%8B%E3%82%8B%E6%95%B0%E5%AD%A6%E5%85%A5%E9%96%80-%E6%B6%8C%E4%BA%95-%E8%89%AF%E5%B9%B8/dp/477418814X">ディープラーニングがわかる数学入門</a></li></ul><hr>]]></content>
-    
-    
-    <categories>
-      
-      <category>学习笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>机器学习</tag>
-      
-      <tag>深度学习</tag>
-      
-      <tag>人工智能</tag>
-      
-      <tag>PyTorch</tag>
-      
-      <tag>Python</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>日本語学習ノート</title>
     <link href="/2023/Note_Of_Japanese_Learning/"/>
     <url>/2023/Note_Of_Japanese_Learning/</url>
@@ -95,7 +62,7 @@
     <link href="/2023/Memo_On_The_Role_Of_Spices/"/>
     <url>/2023/Memo_On_The_Role_Of_Spices/</url>
     
-    <content type="html"><![CDATA[<h1 id="视频推荐">视频推荐</h1><table><thead><tr class="header"><th style="text-align: center;">香辛料</th><th style="text-align: center;">调料</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;"><style>.bbplayer{width: 100%; max-width: 850px; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-wBqIHizdtRtkpVbL" src="https://player.bilibili.com/player.html?bvid=BV19h411N76V&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-wBqIHizdtRtkpVbL").style.height=document.getElementById("mmedia-wBqIHizdtRtkpVbL").scrollWidth*0.76+"px";    window.onresize = function(){      document.getElementById("mmedia-wBqIHizdtRtkpVbL").style.height=document.getElementById("mmedia-wBqIHizdtRtkpVbL").scrollWidth*0.76+"px";    }; </script></td><td style="text-align: center;"><style>.bbplayer{width: 100%; max-width: 850px; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-tmatHLFBxckUfdFW" src="https://player.bilibili.com/player.html?bvid=BV1DP41197Dj&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-tmatHLFBxckUfdFW").style.height=document.getElementById("mmedia-tmatHLFBxckUfdFW").scrollWidth*0.76+"px";    window.onresize = function(){      document.getElementById("mmedia-tmatHLFBxckUfdFW").style.height=document.getElementById("mmedia-tmatHLFBxckUfdFW").scrollWidth*0.76+"px";    }; </script></td></tr></tbody></table><h1 id="分类">分类</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="视频推荐">视频推荐</h1><table><thead><tr class="header"><th style="text-align: center;">香辛料</th><th style="text-align: center;">调料</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;"><style>.bbplayer{width: 100%; max-width: 850px; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-cMdbHIJJQVnSibjh" src="https://player.bilibili.com/player.html?bvid=BV19h411N76V&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-cMdbHIJJQVnSibjh").style.height=document.getElementById("mmedia-cMdbHIJJQVnSibjh").scrollWidth*0.76+"px";    window.onresize = function(){      document.getElementById("mmedia-cMdbHIJJQVnSibjh").style.height=document.getElementById("mmedia-cMdbHIJJQVnSibjh").scrollWidth*0.76+"px";    }; </script></td><td style="text-align: center;"><style>.bbplayer{width: 100%; max-width: 850px; margin: auto}</style><div class="bbplayer"><iframe class="bbplayer" id="mmedia-gARSDDCwSkyyKieY" src="https://player.bilibili.com/player.html?bvid=BV1DP41197Dj&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0" allowfullscreen="allowfullscreen" scrolling="no" border="0" frameborder="0" framespacing="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"></iframe></div><script> document.getElementById("mmedia-gARSDDCwSkyyKieY").style.height=document.getElementById("mmedia-gARSDDCwSkyyKieY").scrollWidth*0.76+"px";    window.onresize = function(){      document.getElementById("mmedia-gARSDDCwSkyyKieY").style.height=document.getElementById("mmedia-gARSDDCwSkyyKieY").scrollWidth*0.76+"px";    }; </script></td></tr></tbody></table><h1 id="分类">分类</h1>]]></content>
     
     
     <categories>
