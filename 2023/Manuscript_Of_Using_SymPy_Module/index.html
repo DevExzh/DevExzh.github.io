@@ -20,23 +20,23 @@
   
     <meta name="description" content="Life is short，you need Python.  —— Guido van Rossum   你离计算机代数只差一行 Python 代码： 1from sympy import * 微积分 求导 拿 \(\displaystyle\frac{d}{d x} 2^{\operatorname{arctan}{\frac{1 - x^{2}}{1 + x^{2}}}}\) 这个来说 1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sympy 库使用小记">
+<meta property="og:title" content="SymPy 库使用小记">
 <meta property="og:url" content="https://devexzh.github.io/2023/Manuscript_Of_Using_SymPy_Module/">
 <meta property="og:site_name" content="杂货小铺">
 <meta property="og:description" content="Life is short，you need Python.  —— Guido van Rossum   你离计算机代数只差一行 Python 代码： 1from sympy import * 微积分 求导 拿 \(\displaystyle\frac{d}{d x} 2^{\operatorname{arctan}{\frac{1 - x^{2}}{1 + x^{2}}}}\) 这个来说 1">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://devexzh.github.io/img/japan.jpg">
+<meta property="og:image" content="https://devexzh.github.io/img/sympy_bg.jpg">
 <meta property="article:published_time" content="2023-08-14T13:11:32.000Z">
-<meta property="article:modified_time" content="2023-08-14T15:00:36.379Z">
+<meta property="article:modified_time" content="2023-08-14T15:04:17.543Z">
 <meta property="article:author" content="Ryker Zhu">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="符号计算">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://devexzh.github.io/img/japan.jpg">
+<meta name="twitter:image" content="https://devexzh.github.io/img/sympy_bg.jpg">
   
   
   
-  <title>Sympy 库使用小记 | 杂货小铺</title>
+  <title>SymPy 库使用小记 | 杂货小铺</title>
 
   <link  rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-d/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -93,9 +93,9 @@
 
 
   
-<!-- hexo injector head_end start --><script> let HEXO_MMEDIA_DATA = { js: [], css: [], aplayerData: [], metingData: [], artPlayerData: [], dplayerData: []}; </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0">
+<!-- hexo injector head_end start --><script> let HEXO_MMEDIA_DATA = { js: [], css: [], aplayerData: [], metingData: [], artPlayerData: [], dplayerData: []}; </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="杂货小铺" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="杂货小铺" type="application/atom+xml">
 </head>
 
 
@@ -181,13 +181,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/japan.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/sympy_bg.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Sympy 库使用小记</span>
+            <span id="subtitle">SymPy 库使用小记</span>
           
         </div>
 
@@ -210,7 +210,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.2k 字
+          2.3k 字
         
       </span>
     
@@ -259,7 +259,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Sympy 库使用小记</h1>
+            <h1 style="display: none">SymPy 库使用小记</h1>
             
             
               <div class="markdown-body">
@@ -285,12 +285,12 @@ x^{2}}{1 + x^{2}}}}\ln2\cdot\frac{2x}{x^{4} + 1}\]</span></p>
 \sin{\left(x y \right)}\)</span>
 <abbr title="出自汤家凤考研数学接力题典 1800 题目册 P98">这个</abbr>的偏导也可以：</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs Python">init_printing()<br>x, y = symbols(<span class="hljs-string">'x y'</span>)<br>expr = E**(x**<span class="hljs-number">2</span>+y**<span class="hljs-number">2</span>)*sin(x*y)<br><span class="hljs-comment"># 分别对 x、对 y 和先对 x 再对 y 求偏导</span><br><span class="hljs-built_in">print</span>(diff(expr, x), diff(expr, y))<br><span class="hljs-built_in">print</span>(diff(expr, x, y))<br></code></pre></td></tr></tbody></table></figure>
-<p>然后就分别得到了 <span class="math display">\[2 x e^{x^{2} + y^{2}}
-\sin{\left(x y \right)} + y e^{x^{2} + y^{2}} \cos{\left(x y \right)}\\
-e^{x^{2} + y^{2}} \cos{\left(x y \right)} + 2 y e^{x^{2} + y^{2}}
-\sin{\left(x y \right)}\\ \left(3 x y \sin{\left(x y \right)} + \left(2
-x^{2} + 2 y^{2} + 1\right) \cos{\left(x y \right)}\right) e^{x^{2} +
-y^{2}}\]</span></p>
+<p>然后就分别得到了 <span class="math display">\[\begin{array}{c}2 x
+e^{x^{2} + y^{2}} \sin{\left(x y \right)} + y e^{x^{2} + y^{2}}
+\cos{\left(x y \right)}\\ e^{x^{2} + y^{2}} \cos{\left(x y \right)} + 2
+y e^{x^{2} + y^{2}} \sin{\left(x y \right)}\\ \left(3 x y \sin{\left(x y
+\right)} + \left(2 x^{2} + 2 y^{2} + 1\right) \cos{\left(x y
+\right)}\right) e^{x^{2} + y^{2}}\end{array}\]</span></p>
 <p>完美！</p>
 <h3 id="积分">积分</h3>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-comment"># 对象形式</span><br>Integral(expr, (var, lower, upper))<br><span class="hljs-comment"># 函数形式</span><br>integrate(expr, (var, lower, upper))<br></code></pre></td></tr></tbody></table></figure>
@@ -463,7 +463,7 @@ Talk is cheap, show me the code.
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Sympy 库使用小记</div>
+      <div>SymPy 库使用小记</div>
       <div>https://devexzh.github.io/2023/Manuscript_Of_Using_SymPy_Module/</div>
     </div>
     <div class="license-meta">
