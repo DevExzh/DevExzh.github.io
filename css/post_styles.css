@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Smiley Sans';
+    src: local('Smiley Sans Oblique'), local('SmileySans-Oblique'),
+        url('fonts/SmileySans-Oblique.woff2') format('woff2'),
+        url('fonts/SmileySans-Oblique.woff') format('woff'),
+        url('fonts/SmileySans-Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
 figure.highlight table {
 	overflow: auto;
 }
@@ -13,7 +25,7 @@ h1, h2, h3, h4, h5, h6, p, body, button, input, select, textarea {
 
 .markdown-body h1 {
 	text-align: center;
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-family: "Palatino Linotype", "Book Antiqua", "Smiley Sans Oblique";
 }
 
 .md-centering-table {
@@ -49,3 +61,33 @@ h1, h2, h3, h4, h5, h6, p, body, button, input, select, textarea {
 	-webkit-animation: rota 60s linear infinite;
 	        animation: rota 60s linear infinite;
 }
+
+  
+  .tooltip {
+    position: relative;
+    text-decoration: underline dashed;
+  }
+
+  .tooltip:before {
+    visibility: hidden;
+  }
+
+  .tooltip:hover:before {
+    visibility: visible;
+  }
+
+  .tooltip:before {
+    position: absolute;
+    display: block;
+    left: -20px;
+    content: attr(data-tooltip);
+    font-size: 12px;
+    background: #1f3144;
+    padding: 8px 4px;
+    width: 120px;
+    border-radius: 6px;
+    z-index: 114514;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  }

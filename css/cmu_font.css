@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'CMU Typewriter Text';
     src: local('CMU Typewriter Text Light'), local('CMUTypewriter-Light'),
-        url('fonts/cmu/CMUTypewriter-Light.woff2') format('woff2'),
-        url('fonts/cmu/CMUTypewriter-Light.woff') format('woff');
+        url('fonts/CMUTypewriter-Light.woff2') format('woff2'),
+        url('fonts/CMUTypewriter-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -11,8 +11,8 @@
 @font-face {
     font-family: 'CMU Typewriter Text';
     src: local('CMU Typewriter Text Light Oblique'), local('CMUTypewriter-LightOblique'),
-        url('fonts/cmu/CMUTypewriter-LightOblique.woff2') format('woff2'),
-        url('fonts/cmu/CMUTypewriter-LightOblique.woff') format('woff');
+        url('fonts/CMUTypewriter-LightOblique.woff2') format('woff2'),
+        url('fonts/CMUTypewriter-LightOblique.woff') format('woff');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -21,8 +21,8 @@
 @font-face {
     font-family: 'CMU Bright';
     src: local('CMU Bright SemiBold Oblique'), local('CMUBright-SemiBoldOblique'),
-        url('fonts/cmu/CMUBright-SemiBoldOblique.woff2') format('woff2'),
-        url('fonts/cmu/CMUBright-SemiBoldOblique.woff') format('woff');
+        url('fonts/CMUBright-SemiBoldOblique.woff2') format('woff2'),
+        url('fonts/CMUBright-SemiBoldOblique.woff') format('woff');
     font-weight: 600;
     font-style: italic;
     font-display: swap;
@@ -31,8 +31,8 @@
 @font-face {
     font-family: 'CMU Bright';
     src: local('CMU Bright Bold Extended Oblique'), local('CMUBright-BoldOblique'),
-        url('fonts/cmu/CMUBright-BoldOblique.woff2') format('woff2'),
-        url('fonts/cmu/CMUBright-BoldOblique.woff') format('woff');
+        url('fonts/CMUBright-BoldOblique.woff2') format('woff2'),
+        url('fonts/CMUBright-BoldOblique.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -41,8 +41,8 @@
 @font-face {
     font-family: 'CMU Bright';
     src: local('CMU Bright SemiBold'), local('CMUBright-SemiBold'),
-        url('fonts/cmu/CMUBright-SemiBold.woff2') format('woff2'),
-        url('fonts/cmu/CMUBright-SemiBold.woff') format('woff');
+        url('fonts/CMUBright-SemiBold.woff2') format('woff2'),
+        url('fonts/CMUBright-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -51,8 +51,8 @@
 @font-face {
     font-family: 'CMU Bright';
     src: local('CMU Bright Bold Extended'), local('CMUBright-Bold'),
-        url('fonts/cmu/CMUBright-Bold.woff2') format('woff2'),
-        url('fonts/cmu/CMUBright-Bold.woff') format('woff');
+        url('fonts/CMUBright-Bold.woff2') format('woff2'),
+        url('fonts/CMUBright-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -61,8 +61,8 @@
 @font-face {
     font-family: 'CMU Bright';
     src: local('CMU Bright Roman'), local('CMUBright-Roman'),
-        url('fonts/cmu/CMUBright-Roman.woff2') format('woff2'),
-        url('fonts/cmu/CMUBright-Roman.woff') format('woff');
+        url('fonts/CMUBright-Roman.woff2') format('woff2'),
+        url('fonts/CMUBright-Roman.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -71,8 +71,8 @@
 @font-face {
     font-family: 'CMU Bright';
     src: local('CMU Bright Oblique'), local('CMUBright-Oblique'),
-        url('fonts/cmu/CMUBright-Oblique.woff2') format('woff2'),
-        url('fonts/cmu/CMUBright-Oblique.woff') format('woff');
+        url('fonts/CMUBright-Oblique.woff2') format('woff2'),
+        url('fonts/CMUBright-Oblique.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -81,8 +81,8 @@
 @font-face {
     font-family: 'CMU Concrete';
     src: local('CMU Concrete Roman'), local('CMUConcrete-Roman'),
-        url('fonts/cmu/CMUConcrete-Roman.woff2') format('woff2'),
-        url('fonts/cmu/CMUConcrete-Roman.woff') format('woff');
+        url('fonts/CMUConcrete-Roman.woff2') format('woff2'),
+        url('fonts/CMUConcrete-Roman.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -91,8 +91,8 @@
 @font-face {
     font-family: 'CMU Concrete';
     src: local('CMU Concrete Bold Extended Roman'), local('CMUConcrete-Bold'),
-        url('fonts/cmu/CMUConcrete-Bold.woff2') format('woff2'),
-        url('fonts/cmu/CMUConcrete-Bold.woff') format('woff');
+        url('fonts/CMUConcrete-Bold.woff2') format('woff2'),
+        url('fonts/CMUConcrete-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -101,8 +101,8 @@
 @font-face {
     font-family: 'CMU Concrete';
     src: local('CMU Concrete Italic'), local('CMUConcrete-Italic'),
-        url('fonts/cmu/CMUConcrete-Italic.woff2') format('woff2'),
-        url('fonts/cmu/CMUConcrete-Italic.woff') format('woff');
+        url('fonts/CMUConcrete-Italic.woff2') format('woff2'),
+        url('fonts/CMUConcrete-Italic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -111,8 +111,8 @@
 @font-face {
     font-family: 'CMU Concrete';
     src: local('CMU Concrete Bold Extended Italic'), local('CMUConcrete-BoldItalic'),
-        url('fonts/cmu/CMUConcrete-BoldItalic.woff2') format('woff2'),
-        url('fonts/cmu/CMUConcrete-BoldItalic.woff') format('woff');
+        url('fonts/CMUConcrete-BoldItalic.woff2') format('woff2'),
+        url('fonts/CMUConcrete-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -121,8 +121,8 @@
 @font-face {
     font-family: 'CMU Typewriter Text';
     src: local('CMU Typewriter Text Bold Italic'), local('CMUTypewriter-BoldItalic'),
-        url('fonts/cmu/CMUTypewriter-BoldItalic.woff2') format('woff2'),
-        url('fonts/cmu/CMUTypewriter-BoldItalic.woff') format('woff');
+        url('fonts/CMUTypewriter-BoldItalic.woff2') format('woff2'),
+        url('fonts/CMUTypewriter-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -131,8 +131,8 @@
 @font-face {
     font-family: 'CMU Typewriter Text';
     src: local('CMU Typewriter Text Bold'), local('CMUTypewriter-Bold'),
-        url('fonts/cmu/CMUTypewriter-Bold.woff2') format('woff2'),
-        url('fonts/cmu/CMUTypewriter-Bold.woff') format('woff');
+        url('fonts/CMUTypewriter-Bold.woff2') format('woff2'),
+        url('fonts/CMUTypewriter-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -141,8 +141,8 @@
 @font-face {
     font-family: 'CMU Classical Serif';
     src: local('CMU Classical Serif Italic'), local('CMUClassicalSerif-Italic'),
-        url('fonts/cmu/CMUClassicalSerif-Italic.woff2') format('woff2'),
-        url('fonts/cmu/CMUClassicalSerif-Italic.woff') format('woff');
+        url('fonts/CMUClassicalSerif-Italic.woff2') format('woff2'),
+        url('fonts/CMUClassicalSerif-Italic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -151,8 +151,8 @@
 @font-face {
     font-family: 'CMU Sans Serif';
     src: local('CMU Sans Serif Bold Extended Oblique'), local('CMUSansSerif-BoldOblique'),
-        url('fonts/cmu/CMUSansSerif-BoldOblique.woff2') format('woff2'),
-        url('fonts/cmu/CMUSansSerif-BoldOblique.woff') format('woff');
+        url('fonts/CMUSansSerif-BoldOblique.woff2') format('woff2'),
+        url('fonts/CMUSansSerif-BoldOblique.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -161,8 +161,8 @@
 @font-face {
     font-family: 'CMU Sans Serif';
     src: local('CMU Sans Serif Bold Extended'), local('CMUSansSerif-Bold'),
-        url('fonts/cmu/CMUSansSerif-Bold.woff2') format('woff2'),
-        url('fonts/cmu/CMUSansSerif-Bold.woff') format('woff');
+        url('fonts/CMUSansSerif-Bold.woff2') format('woff2'),
+        url('fonts/CMUSansSerif-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -171,8 +171,8 @@
 @font-face {
     font-family: 'CMU Sans Serif Demi Condensed';
     src: local('CMU Sans Serif Demi Condensed'), local('CMUSansSerif-DemiCondensed'),
-        url('fonts/cmu/CMUSansSerif-DemiCondensed.woff2') format('woff2'),
-        url('fonts/cmu/CMUSansSerif-DemiCondensed.woff') format('woff');
+        url('fonts/CMUSansSerif-DemiCondensed.woff2') format('woff2'),
+        url('fonts/CMUSansSerif-DemiCondensed.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -181,8 +181,8 @@
 @font-face {
     font-family: 'CMU Sans Serif';
     src: local('CMU Sans Serif Oblique'), local('CMUSansSerif-Oblique'),
-        url('fonts/cmu/CMUSansSerif-Oblique.woff2') format('woff2'),
-        url('fonts/cmu/CMUSansSerif-Oblique.woff') format('woff');
+        url('fonts/CMUSansSerif-Oblique.woff2') format('woff2'),
+        url('fonts/CMUSansSerif-Oblique.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -191,8 +191,8 @@
 @font-face {
     font-family: 'CMU Typewriter Text Variable Width';
     src: local('CMU Typewriter Text Variable Width Italic'), local('CMUTypewriterVariable-Italic'),
-        url('fonts/cmu/CMUTypewriterVariable-Italic.woff2') format('woff2'),
-        url('fonts/cmu/CMUTypewriterVariable-Italic.woff') format('woff');
+        url('fonts/CMUTypewriterVariable-Italic.woff2') format('woff2'),
+        url('fonts/CMUTypewriterVariable-Italic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -201,8 +201,8 @@
 @font-face {
     font-family: 'CMU Sans Serif';
     src: local('CMU Sans Serif'), local('CMUSansSerif'),
-        url('fonts/cmu/CMUSansSerif.woff2') format('woff2'),
-        url('fonts/cmu/CMUSansSerif.woff') format('woff');
+        url('fonts/CMUSansSerif.woff2') format('woff2'),
+        url('fonts/CMUSansSerif.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -211,8 +211,8 @@
 @font-face {
     font-family: 'CMU Typewriter Text';
     src: local('CMU Typewriter Text Italic'), local('CMUTypewriter-Italic'),
-        url('fonts/cmu/CMUTypewriter-Italic.woff2') format('woff2'),
-        url('fonts/cmu/CMUTypewriter-Italic.woff') format('woff');
+        url('fonts/CMUTypewriter-Italic.woff2') format('woff2'),
+        url('fonts/CMUTypewriter-Italic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -221,8 +221,8 @@
 @font-face {
     font-family: 'CMU Typewriter Text Variable Width';
     src: local('CMU Typewriter Text Variable Width'), local('CMUTypewriterVariable'),
-        url('fonts/cmu/CMUTypewriterVariable.woff2') format('woff2'),
-        url('fonts/cmu/CMUTypewriterVariable.woff') format('woff');
+        url('fonts/CMUTypewriterVariable.woff2') format('woff2'),
+        url('fonts/CMUTypewriterVariable.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -231,8 +231,8 @@
 @font-face {
     font-family: 'CMU Typewriter Text';
     src: local('CMU Typewriter Text Regular'), local('CMUTypewriter-Regular'),
-        url('fonts/cmu/CMUTypewriter-Regular.woff2') format('woff2'),
-        url('fonts/cmu/CMUTypewriter-Regular.woff') format('woff');
+        url('fonts/CMUTypewriter-Regular.woff2') format('woff2'),
+        url('fonts/CMUTypewriter-Regular.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -241,8 +241,8 @@
 @font-face {
     font-family: 'CMU Typewriter Text';
     src: local('CMU Typewriter Text Oblique'), local('CMUTypewriter-Oblique'),
-        url('fonts/cmu/CMUTypewriter-Oblique.woff2') format('woff2'),
-        url('fonts/cmu/CMUTypewriter-Oblique.woff') format('woff');
+        url('fonts/CMUTypewriter-Oblique.woff2') format('woff2'),
+        url('fonts/CMUTypewriter-Oblique.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -251,8 +251,8 @@
 @font-face {
     font-family: 'CMU Serif';
     src: local('CMU Serif Italic'), local('CMUSerif-Italic'),
-        url('fonts/cmu/CMUSerif-Italic.woff2') format('woff2'),
-        url('fonts/cmu/CMUSerif-Italic.woff') format('woff');
+        url('fonts/CMUSerif-Italic.woff2') format('woff2'),
+        url('fonts/CMUSerif-Italic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -261,8 +261,8 @@
 @font-face {
     font-family: 'CMU Serif Upright';
     src: local('CMU Serif Upright Italic'), local('CMUSerif-UprightItalic'),
-        url('fonts/cmu/CMUSerif-UprightItalic.woff2') format('woff2'),
-        url('fonts/cmu/CMUSerif-UprightItalic.woff') format('woff');
+        url('fonts/CMUSerif-UprightItalic.woff2') format('woff2'),
+        url('fonts/CMUSerif-UprightItalic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -271,8 +271,8 @@
 @font-face {
     font-family: 'CMU Serif';
     src: local('CMU Serif Roman'), local('CMUSerif-Roman'),
-        url('fonts/cmu/CMUSerif-Roman.woff2') format('woff2'),
-        url('fonts/cmu/CMUSerif-Roman.woff') format('woff');
+        url('fonts/CMUSerif-Roman.woff2') format('woff2'),
+        url('fonts/CMUSerif-Roman.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -281,8 +281,8 @@
 @font-face {
     font-family: 'CMU Serif Extra';
     src: local('CMU Serif Roman Slanted'), local('CMUSerif-RomanSlanted'),
-        url('fonts/cmu/CMUSerif-RomanSlanted.woff2') format('woff2'),
-        url('fonts/cmu/CMUSerif-RomanSlanted.woff') format('woff');
+        url('fonts/CMUSerif-RomanSlanted.woff2') format('woff2'),
+        url('fonts/CMUSerif-RomanSlanted.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -291,8 +291,8 @@
 @font-face {
     font-family: 'CMU Serif';
     src: local('CMU Serif Bold Extended Roman'), local('CMUSerif-Bold'),
-        url('fonts/cmu/CMUSerif-Bold.woff2') format('woff2'),
-        url('fonts/cmu/CMUSerif-Bold.woff') format('woff');
+        url('fonts/CMUSerif-Bold.woff2') format('woff2'),
+        url('fonts/CMUSerif-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
