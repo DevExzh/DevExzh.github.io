@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://devexzh.github.io/img/pcb3.jpg">
 <meta property="article:published_time" content="2023-07-14T14:00:00.000Z">
-<meta property="article:modified_time" content="2023-09-04T16:16:48.298Z">
+<meta property="article:modified_time" content="2023-09-09T10:52:36.651Z">
 <meta property="article:author" content="Ryker Zhu">
 <meta property="article:tag" content="电子学">
 <meta name="twitter:card" content="summary_large_image">
@@ -209,7 +209,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          2.6k 字
         
       </span>
     
@@ -220,7 +220,7 @@
         
         
         
-          3 分钟
+          5 分钟
         
       </span>
     
@@ -319,13 +319,57 @@ depleted of any conduction electrons or holes and is known as the
 device. <strong><em>Forward bias</em></strong> is the condition that
 permits current across a PN junction while the <strong><em>reverse
 bias</em></strong> prevents current across it.</p>
-<h4 id="zener-breakdown">Zener Breakdown</h4>
 <h4 id="avalanche-breakdown">Avalanche Breakdown</h4>
-<p>If the external reverse-bias voltage is increased to a large enough
-value, <strong><em>avalanche breakdown</em></strong> occurs.</p>
+<table>
+<tbody><tr style="border:none;">
+<td style="border:none;">
+If the external reverse-bias voltage is increased to a large enough
+value, <strong><em>avalanche breakdown</em></strong> occurs. Just like
+nuclear fission, when a free electron acquires enough energy, i.e.
+higher voltage than the <span class="math inline">\(V_{\mathrm{BR}}\)</span> (see the <a href="#diode-current-voltage-characteristics">figure</a> below), from
+the external source to accelerate it toward the positive end of the
+diode and then it would collide with atoms so there will be more valence
+electrons turned into free electrons, resulting in a rapid buildup of
+reverse current.
+</td>
+<td style="border:none;text-align:center;">
+<img class="post-gallery-images" oncontextmenu="return false;" id="img-diode_characteristics_curve" alt="Nuclear Fission" src="/img/post_gallery/ad58b7a3528e73bff9c8a532f7d09129/nuclear_fission_reaction.svg" srcset="/img/loading.gif" lazyload>
+<figcaption aria-hidden="true" class="image-caption">
+Nuclear
+Fission<br><sub><a target="_blank" rel="noopener" href="https://commons.wikimedia.org/wiki/File:Nuclear_fission_reaction.svg">Reference</a></sub>
+</figcaption>
+</td>
+</tr>
+</tbody></table>
 <h2 id="diode-models-and-circuits">Diode Models and Circuits</h2>
-<p><img class="post-gallery-images" oncontextmenu="return false;" id="img-diode_characteristics_curve" src="/img/post_gallery/ad58b7a3528e73bff9c8a532f7d09129/diode_characteristics_curve.svg" srcset="/img/loading.gif" lazyload></p>
+<p><img class="post-gallery-images" id="diode-symbol" oncontextmenu="return false;" src="/img/post_gallery/ad58b7a3528e73bff9c8a532f7d09129/diode_symbol.svg" srcset="/img/loading.gif" lazyload alt="Standard schematic symbol for diode"></p>
+<table>
+<tbody><tr style="border:none;">
+<td style="border:none;">
+There is nearly no forward current for forward voltages below the
+barrier potential (0.7V on the figure, which is the typical for silicon
+and the germanium's is 0.3V) but as the voltage reaches it, the current
+increases drastically and must be limited. For a forward-biased diode,
+the voltage is also called the <b><i>diode drop</i></b>.
+</td>
+<td style="border:none;" width="40%">
+<img class="post-gallery-images" id="diode-current-voltage-characteristics" oncontextmenu="return false;" src="/img/post_gallery/ad58b7a3528e73bff9c8a532f7d09129/diode_characteristics_curve.svg" srcset="/img/loading.gif" lazyload>
+</td>
+</tr>
+</tbody></table>
+<h3 id="special-purpose-diodes">Special-Purpose Diodes</h3>
+<h4 id="zener-diode">Zener Diode</h4>
+<p><img class="post-gallery-images" id="zdiode-symbol" oncontextmenu="return false;" src="/img/post_gallery/ad58b7a3528e73bff9c8a532f7d09129/zdiode_symbol.svg" srcset="/img/loading.gif" lazyload alt="Standard schematic symbol for zener diode"></p>
+<p>For the general purpose diodes, it should not operate in the
+reverse-breakdown region but the zener diode does. From the figure
+above, when the diode is reverse biased and reaches <span class="math inline">\(V_{\mathrm{BR}}\)</span>, the current would
+increase drastically but the voltage remains almost unchanged.</p>
 <h2 id="bipolar-junction-transistors">Bipolar Junction Transistors</h2>
+<p>The <strong><em>bipolar junction transistor</em></strong>
+(<em>BJT</em>) is constructed with three doped semiconductor regions
+called emitter, base, and collector, where each of two are separated by
+two PN junctions.</p>
+<p><img class="post-gallery-images" id="bjt-structure" oncontextmenu="return false;" src="/img/post_gallery/ad58b7a3528e73bff9c8a532f7d09129/bjt_struct.svg" srcset="/img/loading.gif" lazyload alt="Two types of BJT"></p>
 <h2 id="field-effect-transistors">Field Effect Transistors</h2>
 
                 
